@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MediBot — Autonomous Pharmacy System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* MediBot brand palette */
+  --teal-700: #0D7B72;
+  --teal-600: #0F9B90;
+  --teal-500: #14B8A6;
+  --teal-400: #2DD4C0;
+  --teal-100: #CCFBF1;
+  --teal-50:  #F0FDFA;
+
+  --navy-950: #040D1A;
+  --navy-900: #071528;
+  --navy-800: #0C2040;
+  --navy-700: #102B56;
+  --navy-600: #153870;
+
+  --slate-800: #1E293B;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748B;
+  --slate-400: #94A3B8;
+  --slate-300: #CBD5E1;
+  --slate-200: #E2E8F0;
+  --slate-100: #F1F5F9;
+  --slate-50:  #F8FAFC;
+
+  --white: #FFFFFF;
+  --red:   #EF4444;
+  --red-light: #FEF2F2;
+  --red-border: #FECACA;
+  --amber: #F59E0B;
+  --amber-light: #FFFBEB;
+  --amber-border: #FDE68A;
+  --green: #10B981;
+  --green-light: #ECFDF5;
+  --green-border: #A7F3D0;
+  --blue:  #3B82F6;
+  --blue-light: #EFF6FF;
+  --purple:#8B5CF6;
+
+  --text:       #1E293B;
+  --text-muted: #64748B;
+  --text-dim:   #94A3B8;
+  --border:     #E2E8F0;
+  --bg:         #F8FAFC;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.05);
+  --shadow:    0 1px 3px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.07);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,.10);
+  --radius-sm: 6px;
+  --radius:    10px;
+  --radius-lg: 14px;
+  --sidebar:   252px;
+
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 14px; scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  min-height: 100vh;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ══════════════════════════════════════
+   SIDEBAR
+══════════════════════════════════════ */
+.sidebar {
+  width: var(--sidebar);
+  background: var(--navy-900);
+  background-image: linear-gradient(180deg, var(--navy-950) 0%, var(--navy-900) 40%, var(--navy-800) 100%);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 200;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.1); border-radius: 2px; }
+
+.sidebar-brand {
+  padding: 22px 20px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.brand-icon {
+  width: 34px; height: 34px;
+  background: linear-gradient(135deg, var(--teal-600), var(--teal-400));
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px;
+  box-shadow: 0 0 16px rgba(20,184,166,.35);
+}
+.brand-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -.4px;
+}
+.brand-name span { color: var(--teal-400); }
+.brand-tag {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255,255,255,.35);
+  letter-spacing: .04em;
+  padding-left: 44px;
+}
+
+.nav-section {
+  padding: 18px 0 4px;
+}
+.nav-section-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.28);
+  padding: 0 20px 8px;
+  text-transform: uppercase;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  color: rgba(255,255,255,.52);
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  font-size: 13px;
+  font-weight: 500;
+  user-select: none;
+  transition: color .15s, background .15s, border-color .15s;
+  position: relative;
+}
+.nav-item:hover { color: rgba(255,255,255,.85); background: rgba(255,255,255,.04); }
+.nav-item.active {
+  color: var(--white);
+  background: rgba(20,184,166,.12);
+  border-left-color: var(--teal-400);
+}
+.nav-item.active .nav-icon { color: var(--teal-400); }
+.nav-icon {
+  font-size: 14px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: color .15s;
+}
+.nav-badge {
+  margin-left: auto;
+  background: var(--red);
+  color: white;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 8px;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1.6;
+}
+.nav-badge.amber { background: var(--amber); }
+.nav-badge.hidden { display: none; }
+
+.sidebar-system {
+  margin-top: auto;
+  padding: 14px 16px;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.system-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 7px;
+}
+.system-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.system-dot.online  { background: var(--green); box-shadow: 0 0 6px var(--green); }
+.system-dot.offline { background: var(--red); }
+.system-dot.busy    { background: var(--amber); box-shadow: 0 0 6px var(--amber); }
+.system-pill-text   { font-size: 11px; color: rgba(255,255,255,.6); flex: 1; }
+.system-pill-state  { font-size: 10px; font-weight: 600; color: rgba(255,255,255,.4); }
+@keyframes pulse-glow { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+/* ══════════════════════════════════════
+   TOPBAR
+══════════════════════════════════════ */
+.main { margin-left: var(--sidebar); flex: 1; display: flex; flex-direction: column; min-height: 100vh; }
+
+.topbar {
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 28px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
+}
+.topbar-left { display: flex; align-items: center; gap: 14px; }
+.topbar-breadcrumb {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.topbar-right { display: flex; align-items: center; gap: 12px; }
+.topbar-clock {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+  background: var(--slate-100);
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+.topbar-updated {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.btn-sm {
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background .15s, transform .1s;
+}
+.btn-sm:active { transform: scale(.97); }
+.btn-primary   { background: var(--teal-600); color: white; }
+.btn-primary:hover { background: var(--teal-700); }
+.btn-ghost     { background: var(--slate-100); color: var(--text-muted); }
+.btn-ghost:hover { background: var(--slate-200); color: var(--text); }
+
+/* ══════════════════════════════════════
+   CONTENT / PAGES
+══════════════════════════════════════ */
+.content { padding: 26px 28px 48px; flex: 1; }
+.page { display: none; }
+.page.active { display: block; animation: fadeIn .18s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+.page-head { margin-bottom: 22px; }
+.page-head h1 { font-size: 21px; font-weight: 800; color: var(--text); letter-spacing: -.4px; margin-bottom: 3px; }
+.page-head p  { font-size: 13px; color: var(--text-muted); font-weight: 400; }
+
+/* ══════════════════════════════════════
+   STATS STRIP
+══════════════════════════════════════ */
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 16px 14px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--teal-500);
+  opacity: 0;
+  transition: opacity .2s;
+}
+.stat-card.flagged::before { opacity: 1; background: var(--red); }
+.stat-card.warn::before    { opacity: 1; background: var(--amber); }
+.stat-card.ok::before      { opacity: 1; background: var(--green); }
+
+.stat-icon { font-size: 18px; margin-bottom: 10px; }
+.stat-val {
+  font-size: 30px; font-weight: 800; line-height: 1; margin-bottom: 4px;
+  color: var(--text); letter-spacing: -.5px;
+}
+.stat-card.flagged .stat-val { color: var(--red); }
+.stat-card.warn .stat-val    { color: var(--amber); }
+.stat-card.ok .stat-val      { color: var(--green); }
+.stat-lbl { font-size: 11px; font-weight: 600; color: var(--text-muted); margin-bottom: 2px; }
+.stat-sub { font-size: 11px; color: var(--text-dim); }
+
+/* ══════════════════════════════════════
+   GRID LAYOUTS
+══════════════════════════════════════ */
+.grid-2   { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+.grid-3   { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+.grid-6-4 { display: grid; grid-template-columns: 6fr 4fr; gap: 18px; margin-bottom: 18px; }
+.grid-4-6 { display: grid; grid-template-columns: 4fr 6fr; gap: 18px; margin-bottom: 18px; }
+
+/* ══════════════════════════════════════
+   CARD
+══════════════════════════════════════ */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.card-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.card-title { font-size: 13px; font-weight: 700; color: var(--text); }
+.card-sub   { font-size: 11.5px; color: var(--text-muted); margin-top: 1px; }
+.card-action {
+  font-size: 12px; color: var(--teal-600); cursor: pointer; font-weight: 600;
+  white-space: nowrap; flex-shrink: 0;
+}
+.card-action:hover { text-decoration: underline; }
+.card-body { padding: 18px; }
+
+/* ══════════════════════════════════════
+   TABLE
+══════════════════════════════════════ */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead tr { background: var(--slate-50); border-bottom: 2px solid var(--border); }
+th {
+  text-align: left;
+  padding: 9px 14px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: .05em;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+td { padding: 10px 14px; border-bottom: 1px solid var(--slate-100); color: var(--text); vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+tbody tr:hover td { background: var(--teal-50); cursor: default; }
+.td-mono { font-family: var(--mono); font-size: 11.5px; color: var(--text-muted); }
+.td-strong { font-weight: 700; }
+
+/* ══════════════════════════════════════
+   BADGES
+══════════════════════════════════════ */
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 20px;
+  font-size: 11px; font-weight: 600; white-space: nowrap;
+  border: 1px solid transparent;
+}
+.badge-red    { background: var(--red-light);   color: var(--red);   border-color: var(--red-border); }
+.badge-amber  { background: var(--amber-light); color: #92400E;      border-color: var(--amber-border); }
+.badge-green  { background: var(--green-light); color: #065F46;      border-color: var(--green-border); }
+.badge-teal   { background: var(--teal-100);    color: var(--teal-700); border-color: var(--teal-400); }
+.badge-blue   { background: var(--blue-light);  color: #1D4ED8; }
+.badge-purple { background: #F5F3FF;            color: #6D28D9; }
+.badge-gray   { background: var(--slate-100);   color: var(--slate-600); }
+
+/* ══════════════════════════════════════
+   DISPENSE PAGE
+══════════════════════════════════════ */
+.dispense-layout { display: grid; grid-template-columns: 440px 1fr; gap: 20px; align-items: start; }
+.dispense-form-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-md);
+}
+.dispense-form-title { font-size: 17px; font-weight: 800; color: var(--text); margin-bottom: 4px; letter-spacing: -.3px; }
+.dispense-form-sub   { font-size: 12.5px; color: var(--text-muted); margin-bottom: 24px; }
+.form-group { margin-bottom: 16px; position: relative; }
+.form-label { display: block; font-size: 11.5px; font-weight: 700; color: var(--slate-700); margin-bottom: 6px; letter-spacing: .02em; }
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13.5px; font-family: var(--font);
+  color: var(--text);
+  background: var(--white);
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.form-input:focus { border-color: var(--teal-500); box-shadow: 0 0 0 3px rgba(20,184,166,.12); }
+.form-input::placeholder { color: var(--text-dim); }
+
+.autocomplete-wrap { position: relative; }
+.autocomplete-list {
+  position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+  border: 1.5px solid var(--teal-400);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  max-height: 210px; overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  display: none; z-index: 500;
+}
+.autocomplete-item {
+  padding: 10px 14px; cursor: pointer; font-size: 13px;
+  border-bottom: 1px solid var(--slate-100);
+  transition: background .1s;
+}
+.autocomplete-item:last-child { border-bottom: none; }
+.autocomplete-item:hover { background: var(--teal-50); }
+.autocomplete-item-name { font-weight: 600; color: var(--text); }
+.autocomplete-item-sub  { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+
+.stock-check-bar {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: none;
+  gap: 8px;
+  align-items: center;
+}
+.stock-check-bar.ok     { background: var(--green-light); color: #065F46; border: 1px solid var(--green-border); }
+.stock-check-bar.warn   { background: var(--amber-light); color: #92400E; border: 1px solid var(--amber-border); }
+.stock-check-bar.danger { background: var(--red-light);   color: #991B1B; border: 1px solid var(--red-border); }
+
+.btn-dispense {
+  width: 100%; padding: 13px;
+  background: linear-gradient(135deg, var(--teal-600), var(--teal-700));
+  color: white; border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px; font-weight: 700; font-family: var(--font);
+  cursor: pointer; letter-spacing: -.1px;
+  transition: opacity .15s, transform .1s;
+  box-shadow: 0 2px 8px rgba(15,155,144,.3);
+}
+.btn-dispense:hover { opacity: .92; }
+.btn-dispense:active { transform: scale(.99); }
+.btn-dispense:disabled { opacity: .5; cursor: not-allowed; }
+
+.dispense-result {
+  margin-top: 18px; padding: 16px;
+  border-radius: var(--radius-sm);
+  display: none;
+}
+.dispense-result.success { background: var(--green-light); border: 1px solid var(--green-border); }
+.dispense-result.error   { background: var(--red-light);   border: 1px solid var(--red-border); }
+.dispense-result-title   { font-weight: 700; font-size: 13.5px; margin-bottom: 10px; }
+.dispense-result.success .dispense-result-title { color: #065F46; }
+.dispense-result.error   .dispense-result-title { color: #991B1B; }
+.result-row { display: flex; justify-content: space-between; font-size: 12.5px; margin-top: 5px; }
+.result-row span:first-child { color: var(--text-muted); }
+.result-row span:last-child  { font-weight: 600; }
+
+/* dispense history */
+.history-list { display: flex; flex-direction: column; gap: 8px; }
+.history-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 14px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+}
+.history-index {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--teal-100); color: var(--teal-700);
+  font-size: 10px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.history-med { font-weight: 700; color: var(--text); }
+.history-meta { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+
+/* ══════════════════════════════════════
+   ALERTS
+══════════════════════════════════════ */
+.alert-row {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 13px 0; border-bottom: 1px solid var(--slate-100);
+}
+.alert-row:last-child { border-bottom: none; }
+.alert-sev {
+  flex-shrink: 0; margin-top: 2px;
+  width: 6px; height: 6px; border-radius: 50%;
+}
+.alert-sev.critical { background: var(--red); box-shadow: 0 0 0 3px rgba(239,68,68,.15); }
+.alert-sev.warning  { background: var(--amber); }
+.alert-sev.info     { background: var(--blue); }
+.alert-msg   { font-size: 13px; color: var(--text); font-weight: 500; }
+.alert-meta  { font-size: 11.5px; color: var(--text-muted); margin-top: 3px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+/* ══════════════════════════════════════
+   ROBOT TASK ROWS
+══════════════════════════════════════ */
+.task-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 18px; border-bottom: 1px solid var(--slate-100);
+  font-size: 13px;
+}
+.task-row:last-child { border-bottom: none; }
+.task-id    { font-family: var(--mono); font-size: 10.5px; color: var(--text-dim); min-width: 72px; }
+.task-med   { font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.task-loc   { font-size: 12px; color: var(--text-muted); min-width: 80px; }
+.task-qty   { font-size: 12px; color: var(--text-muted); min-width: 32px; text-align: right; }
+
+/* ══════════════════════════════════════
+   FORECAST
+══════════════════════════════════════ */
+.forecast-item { padding: 11px 0; border-bottom: 1px solid var(--slate-100); }
+.forecast-item:last-child { border-bottom: none; }
+.forecast-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+.forecast-name { font-size: 13px; font-weight: 600; }
+.forecast-num  { font-size: 14px; font-weight: 800; color: var(--teal-600); }
+.forecast-track { height: 5px; background: var(--slate-100); border-radius: 3px; overflow: hidden; margin-bottom: 5px; }
+.forecast-fill  { height: 100%; background: linear-gradient(90deg, var(--teal-500), var(--teal-400)); border-radius: 3px; transition: width .6s ease; }
+.forecast-meta  { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-dim); }
+
+/* ══════════════════════════════════════
+   SEARCH / FILTER BAR
+══════════════════════════════════════ */
+.filter-bar { display: flex; gap: 10px; margin-bottom: 14px; align-items: center; flex-wrap: wrap; }
+.search-inp {
+  flex: 1; min-width: 200px; max-width: 340px;
+  padding: 8px 12px; font-size: 13px; font-family: var(--font);
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  color: var(--text); background: var(--white); outline: none;
+  transition: border-color .15s;
+}
+.search-inp:focus { border-color: var(--teal-400); }
+.filter-sel {
+  padding: 8px 12px; font-size: 13px; font-family: var(--font);
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--white); color: var(--text); outline: none; cursor: pointer;
+}
+.filter-count { font-size: 12px; color: var(--text-muted); margin-left: auto; flex-shrink: 0; }
+
+/* ══════════════════════════════════════
+   PRESCRIPTION
+══════════════════════════════════════ */
+.rx-search-bar { display: flex; gap: 10px; margin-bottom: 18px; }
+.rx-result {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 22px; margin-bottom: 18px; display: none;
+}
+.rx-allergy {
+  background: var(--red-light); border: 1px solid var(--red-border);
+  border-radius: var(--radius-sm); padding: 10px 14px;
+  font-size: 12.5px; color: #991B1B; font-weight: 600;
+  margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+}
+.rx-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 14px; }
+.rx-field label { font-size: 10.5px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; display: block; margin-bottom: 3px; }
+.rx-field span  { font-size: 13.5px; font-weight: 600; color: var(--text); }
+
+/* ══════════════════════════════════════
+   PURCHASE ORDERS
+══════════════════════════════════════ */
+.po-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 18px; border-bottom: 1px solid var(--slate-100); font-size: 13px;
+}
+.po-row:last-child { border-bottom: none; }
+.btn-approve {
+  padding: 4px 12px; border-radius: 5px; border: none;
+  background: var(--green-light); color: #065F46;
+  font-size: 11.5px; font-weight: 700; cursor: pointer;
+  transition: background .15s;
+}
+.btn-approve:hover { background: #A7F3D0; }
+
+/* ══════════════════════════════════════
+   LOADING / EMPTY
+══════════════════════════════════════ */
+.loading {
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px 20px; gap: 10px; color: var(--text-muted); font-size: 13px;
+}
+.spinner {
+  width: 17px; height: 17px;
+  border: 2px solid var(--slate-200); border-top-color: var(--teal-500);
+  border-radius: 50%; animation: spin .65s linear infinite; flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.empty-state { text-align: center; padding: 44px 20px; color: var(--text-muted); }
+.empty-icon { font-size: 32px; margin-bottom: 10px; opacity: .45; }
+.empty-text { font-size: 13.5px; font-weight: 500; margin-bottom: 4px; }
+.empty-sub  { font-size: 12px; color: var(--text-dim); }
+
+/* ══════════════════════════════════════
+   TOAST
+══════════════════════════════════════ */
+.toast {
+  position: fixed; bottom: 22px; right: 22px;
+  background: var(--slate-800); color: white;
+  padding: 11px 18px; border-radius: 9px;
+  font-size: 13px; font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(60px); opacity: 0;
+  transition: transform .22s cubic-bezier(.34,1.56,.64,1), opacity .22s;
+  z-index: 9999; max-width: 300px; pointer-events: none;
+  display: flex; align-items: center; gap: 8px;
+}
+.toast.show    { transform: translateY(0); opacity: 1; }
+.toast.success { background: var(--teal-700); }
+.toast.error   { background: #B91C1C; }
+.toast.warn    { background: #B45309; }
+
+/* ══════════════════════════════════════
+   MISC
+══════════════════════════════════════ */
+.divider { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
+.section-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+.kbd {
+  font-family: var(--mono); font-size: 10px;
+  background: var(--slate-100); border: 1px solid var(--slate-300);
+  border-radius: 3px; padding: 1px 5px; color: var(--text-muted);
+}
+.tag {
+  display: inline-block; padding: 1px 7px;
+  background: var(--slate-100); border-radius: 4px;
+  font-size: 11px; color: var(--text-muted); font-weight: 500;
+}
+
+/* expiry urgency rows */
+tr.expired td   { background: var(--red-light) !important; }
+tr.exp-soon td  { background: var(--amber-light) !important; }
+
+@media (max-width: 1100px) { .stat-strip { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 900px)  {
+  .grid-2, .grid-3, .grid-6-4, .grid-4-6, .dispense-layout { grid-template-columns: 1fr; }
+  .stat-strip { grid-template-columns: repeat(2,1fr); }
+  .rx-grid    { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .sidebar { transform: translateX(-100%); }
+  .main { margin-left: 0; }
+  .content { padding: 18px 16px 40px; }
+  .stat-strip { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ SIDEBAR ══════════════ -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-logo">
+      <div class="brand-icon">💊</div>
+      <div class="brand-name">Medi<span>Bot</span></div>
+    </div>
+    <div class="brand-tag">Autonomous Pharmacy Warehouse System</div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Operations</div>
+    <div class="nav-item active" onclick="showPage('dashboard')"><span class="nav-icon">◼</span> Dashboard</div>
+    <div class="nav-item" onclick="showPage('dispense')"><span class="nav-icon">🤖</span> Dispense / Robot</div>
+    <div class="nav-item" onclick="showPage('prescriptions')"><span class="nav-icon">📋</span> Prescriptions</div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Inventory</div>
+    <div class="nav-item" onclick="showPage('stock')">
+      <span class="nav-icon">📦</span> Stock Status
+      <span class="nav-badge hidden" id="badge-critical">0</span>
+    </div>
+    <div class="nav-item" onclick="showPage('expiry')">
+      <span class="nav-icon">⏰</span> Expiry Risk
+      <span class="nav-badge amber hidden" id="badge-expiry">0</span>
+    </div>
+    <div class="nav-item" onclick="showPage('reorder')"><span class="nav-icon">🔄</span> Reorder List</div>
+    <div class="nav-item" onclick="showPage('medicines')"><span class="nav-icon">🗂</span> Medicine Database</div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">AI & Intelligence</div>
+    <div class="nav-item" onclick="showPage('forecasts')"><span class="nav-icon">📈</span> Demand Forecasts</div>
+    <div class="nav-item" onclick="showPage('orders')">
+      <span class="nav-icon">🛒</span> Purchase Orders
+      <span class="nav-badge hidden" id="badge-orders">0</span>
+    </div>
+    <div class="nav-item" onclick="showPage('alerts')">
+      <span class="nav-icon">🔔</span> Alerts
+      <span class="nav-badge hidden" id="badge-alerts">0</span>
+    </div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">System</div>
+    <div class="nav-item" onclick="showPage('suppliers')"><span class="nav-icon">🏭</span> Suppliers</div>
+  </div>
+
+  <div class="sidebar-system">
+    <div class="system-pill" id="sys-imbot">
+      <div class="system-dot online"></div>
+      <div class="system-pill-text">IM-Bot (UNO-Q)</div>
+      <div class="system-pill-state" id="imbot-state">IDLE</div>
+    </div>
+    <div class="system-pill" id="sys-dbot">
+      <div class="system-dot online"></div>
+      <div class="system-pill-text">D-Bot</div>
+      <div class="system-pill-state" id="dbot-state">IDLE</div>
+    </div>
+    <div class="system-pill">
+      <div class="system-dot online" id="db-dot"></div>
+      <div class="system-pill-text">Database</div>
+      <div class="system-pill-state" id="db-state">ONLINE</div>
+    </div>
+  </div>
+</aside>
+
+<!-- ══════════════ MAIN ══════════════ -->
+<div class="main">
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="topbar-breadcrumb" id="topbar-title">Dashboard</div>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-updated" id="last-updated"></span>
+      <span class="topbar-clock" id="clock">—</span>
+      <button class="btn-sm btn-ghost" onclick="refreshCurrentPage()">↻ Refresh</button>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- ══ DASHBOARD ══ -->
+    <div class="page active" id="page-dashboard">
+      <div class="page-head">
+        <h1>Warehouse Overview</h1>
+        <p id="dash-date">Loading…</p>
+      </div>
+
+      <div class="stat-strip">
+        <div class="stat-card" id="sc-total">
+          <div class="stat-icon">🗂</div>
+          <div class="stat-lbl">Total Medicines</div>
+          <div class="stat-val" id="sv-total">—</div>
+          <div class="stat-sub">registered SKUs</div>
+        </div>
+        <div class="stat-card flagged" id="sc-critical">
+          <div class="stat-icon">🚨</div>
+          <div class="stat-lbl">Critical Stock</div>
+          <div class="stat-val" id="sv-critical">—</div>
+          <div class="stat-sub">immediate action</div>
+        </div>
+        <div class="stat-card warn" id="sc-reorder">
+          <div class="stat-icon">⚠️</div>
+          <div class="stat-lbl">Reorder Needed</div>
+          <div class="stat-val" id="sv-reorder">—</div>
+          <div class="stat-sub">below threshold</div>
+        </div>
+        <div class="stat-card warn" id="sc-expiry">
+          <div class="stat-icon">⏰</div>
+          <div class="stat-lbl">Expiry Alerts</div>
+          <div class="stat-val" id="sv-expiry">—</div>
+          <div class="stat-sub">within 90 days</div>
+        </div>
+        <div class="stat-card" id="sc-tasks">
+          <div class="stat-icon">🤖</div>
+          <div class="stat-lbl">Active Tasks</div>
+          <div class="stat-val" id="sv-tasks">—</div>
+          <div class="stat-sub">queued + running</div>
+        </div>
+        <div class="stat-card" id="sc-orders">
+          <div class="stat-icon">🛒</div>
+          <div class="stat-lbl">Pending Orders</div>
+          <div class="stat-val" id="sv-orders">—</div>
+          <div class="stat-sub">awaiting approval</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-header">
+            <div><div class="card-title">🚨 Critical Stock</div><div class="card-sub">Must reorder immediately</div></div>
+            <span class="card-action" onclick="showPage('stock')">See all →</span>
+          </div>
+          <div id="dash-critical"><div class="loading"><div class="spinner"></div>Loading…</div></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div><div class="card-title">⏰ Expiring Batches</div><div class="card-sub">Within 90 days — act before stock is wasted</div></div>
+            <span class="card-action" onclick="showPage('expiry')">See all →</span>
+          </div>
+          <div id="dash-expiry"><div class="loading"><div class="spinner"></div>Loading…</div></div>
+        </div>
+      </div>
+
+      <div class="grid-6-4">
+        <div class="card">
+          <div class="card-header">
+            <div><div class="card-title">🤖 Live Robot Queue</div><div class="card-sub">Refreshes every 15 seconds</div></div>
+            <span class="card-action" onclick="showPage('dispense')">Dispense →</span>
+          </div>
+          <div id="dash-tasks"><div class="loading"><div class="spinner"></div>Loading…</div></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div><div class="card-title">📈 AI Forecast — Top Demand</div></div>
+            <span class="card-action" onclick="showPage('forecasts')">Full report →</span>
+          </div>
+          <div class="card-body" id="dash-forecast"><div class="loading"><div class="spinner"></div>Loading…</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ DISPENSE ══ -->
+    <div class="page" id="page-dispense">
+      <div class="page-head">
+        <h1>Dispense & Robot Control</h1>
+        <p>Search a medicine → confirm → task queued to IM-bot (UNO-Q). Press <kbd class="kbd">/</kbd> anywhere to focus.</p>
+      </div>
+      <div class="dispense-layout">
+        <div>
+          <div class="dispense-form-card">
+            <div class="dispense-form-title">New Dispense Request</div>
+            <div class="dispense-form-sub">System picks the earliest-expiry batch automatically (FEFO logic)</div>
+            <div class="form-group autocomplete-wrap">
+              <label class="form-label">Medicine — generic or brand name</label>
+              <input class="form-input" id="dispense-name" placeholder="e.g. Paracetamol, Ventolin…" autocomplete="off" oninput="onDispenseSearch(this.value)" onkeydown="dispenseKeydown(event)">
+              <div class="autocomplete-list" id="autocomplete-list"></div>
+            </div>
+            <div class="stock-check-bar" id="stock-check-bar"></div>
+            <div class="form-group">
+              <label class="form-label">Quantity (units)</label>
+              <input class="form-input" id="dispense-qty" type="number" min="1" max="999" value="1">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Notes (optional)</label>
+              <input class="form-input" id="dispense-notes" placeholder="Patient ID, ward, or reference…">
+            </div>
+            <button class="btn-dispense" id="btn-dispense" onclick="doDispense()">
+              Send to IM-Bot →
+            </button>
+            <div class="dispense-result" id="dispense-result">
+              <div class="dispense-result-title" id="disp-res-title"></div>
+              <div id="disp-res-body"></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div class="card">
+            <div class="card-header">
+              <div><div class="card-title">Live Queue</div><div class="card-sub">Auto-refreshes every 10s</div></div>
+              <span class="card-action" onclick="loadQueuedTasks()">↻</span>
+            </div>
+            <div id="queue-list"><div class="loading"><div class="spinner"></div>Loading…</div></div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">Session Dispense History</div></div>
+            <div class="card-body" id="dispense-history">
+              <div class="empty-state"><div class="empty-icon">📋</div><div class="empty-text">No dispenses this session</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ STOCK ══ -->
+    <div class="page" id="page-stock">
+      <div class="page-head"><h1>Stock Status</h1><p>Live inventory levels — color coded by urgency</p></div>
+      <div class="filter-bar">
+        <input class="search-inp" placeholder="Search medicine…" oninput="filterTable('tbl-stock',this.value)">
+        <select class="filter-sel" onchange="filterByStatus('tbl-stock',this.value,7)">
+          <option value="">All Status</option>
+          <option value="CRITICAL">Critical only</option>
+          <option value="REORDER NOW">Reorder Now</option>
+          <option value="ADEQUATE">Adequate</option>
+        </select>
+        <span class="filter-count" id="stock-count"></span>
+      </div>
+      <div class="card"><div class="table-wrap" id="tbl-stock-wrap"><div class="loading"><div class="spinner"></div>Loading stock data…</div></div></div>
+    </div>
+
+    <!-- ══ EXPIRY ══ -->
+    <div class="page" id="page-expiry">
+      <div class="page-head"><h1>Expiry Risk</h1><p>Batches expiring within 90 days — prioritize consumption or return to supplier</p></div>
+      <div class="filter-bar">
+        <input class="search-inp" placeholder="Search medicine or batch…" oninput="filterTable('tbl-expiry',this.value)">
+        <select class="filter-sel" onchange="filterByStatus('tbl-expiry',this.value,6)">
+          <option value="">All</option>
+          <option value="EXPIRED">Expired</option>
+          <option value="EXPIRES SOON">Expires in 30 days</option>
+          <option value="EXPIRING SHORTLY">Expiring in 60 days</option>
+        </select>
+      </div>
+      <div class="card"><div class="table-wrap" id="tbl-expiry-wrap"><div class="loading"><div class="spinner"></div>Loading…</div></div></div>
+    </div>
+
+    <!-- ══ REORDER ══ -->
+    <div class="page" id="page-reorder">
+      <div class="page-head"><h1>Reorder List</h1><p>Medicines below reorder point — quantities recommended by inventory policy (EOQ)</p></div>
+      <div class="card"><div class="table-wrap" id="tbl-reorder-wrap"><div class="loading"><div class="spinner"></div>Loading…</div></div></div>
+    </div>
+
+    <!-- ══ MEDICINES ══ -->
+    <div class="page" id="page-medicines">
+      <div class="page-head"><h1>Medicine Database</h1><p>Complete registered SKU catalog</p></div>
+      <div class="filter-bar">
+        <input class="search-inp" placeholder="Search name, ingredient, class, manufacturer…" oninput="filterTable('tbl-meds',this.value)">
+        <select class="filter-sel" onchange="filterByStatus('tbl-meds',this.value,6)">
+          <option value="">All Types</option>
+          <option value="OTC">OTC only</option>
+          <option value="RX">Prescription only</option>
+        </select>
+        <span class="filter-count" id="meds-count"></span>
+      </div>
+      <div class="card"><div class="table-wrap" id="tbl-meds-wrap"><div class="loading"><div class="spinner"></div>Loading medicines…</div></div></div>
+    </div>
+
+    <!-- ══ FORECASTS ══ -->
+    <div class="page" id="page-forecasts">
+      <div class="page-head"><h1>AI Demand Forecasts</h1><p>30-day predictions from the Gradient Boosting model — run <code style="font-family:var(--mono);font-size:11px;background:var(--slate-100);padding:2px 6px;border-radius:4px">forecasting_model.py</code> to update</p></div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-header"><div class="card-title">Predicted Demand — Next 30 Days</div></div>
+          <div class="card-body" id="forecast-bars"><div class="loading"><div class="spinner"></div>Loading forecasts…</div></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div><div class="card-title">AI Reorder Recommendations</div><div class="card-sub">Shortfall = predicted demand − current stock</div></div>
+          </div>
+          <div class="table-wrap" id="tbl-recs-wrap"><div class="loading"><div class="spinner"></div>Loading…</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PURCHASE ORDERS ══ -->
+    <div class="page" id="page-orders">
+      <div class="page-head"><h1>Purchase Orders</h1><p>AI-drafted orders awaiting human approval — system creates these automatically when stock falls below reorder point</p></div>
+      <div class="card" id="orders-card"><div class="loading"><div class="spinner"></div>Loading…</div></div>
+    </div>
+
+    <!-- ══ ALERTS ══ -->
+    <div class="page" id="page-alerts">
+      <div class="page-head"><h1>Alerts</h1><p>Open system alerts requiring attention</p></div>
+      <div class="card"><div class="card-body" id="alerts-list"><div class="loading"><div class="spinner"></div>Loading…</div></div></div>
+    </div>
+
+    <!-- ══ DISPENSE / ROBOT TASKS (full view) ══ -->
+    <!-- Note: Robot task history embedded in dispense page queue card -->
+
+    <!-- ══ PRESCRIPTIONS ══ -->
+    <div class="page" id="page-prescriptions">
+      <div class="page-head"><h1>Prescriptions</h1><p>Lookup by prescription ID — allergy flags surface automatically</p></div>
+      <div class="rx-search-bar">
+        <input class="form-input" id="rx-input" placeholder="Enter prescription ID…" style="max-width:300px" onkeydown="if(event.key==='Enter')lookupRx()">
+        <button class="btn-sm btn-primary" onclick="lookupRx()">Look up</button>
+      </div>
+      <div class="rx-result" id="rx-result"></div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Recent Prescriptions</div></div>
+        <div class="table-wrap" id="tbl-rx-wrap"><div class="loading"><div class="spinner"></div>Loading…</div></div>
+      </div>
+    </div>
+
+    <!-- ══ SUPPLIERS ══ -->
+    <div class="page" id="page-suppliers">
+      <div class="page-head"><h1>Suppliers</h1><p>Distributor details, lead times, and reliability scoring</p></div>
+      <div class="card"><div class="table-wrap" id="tbl-sup-wrap"><div class="loading"><div class="spinner"></div>Loading…</div></div></div>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /main -->
+
+<div class="toast" id="toast"></div>
+
+<script>
+'use strict';
+const API = 'http://localhost:8000';
+let allMeds = [], dispenseHistory = [], currentPage = 'dashboard';
+let autoRefreshInterval = null;
+
+/* ══ CLOCK ══ */
+function tick() {
+  const n = new Date();
+  document.getElementById('clock').textContent =
+    n.toLocaleTimeString('en-GB', {hour:'2-digit',minute:'2-digit',second:'2-digit'});
+}
+setInterval(tick, 1000); tick();
+
+function setDashDate() {
+  const d = new Date();
+  const opts = {weekday:'long',year:'numeric',month:'long',day:'numeric'};
+  document.getElementById('dash-date').textContent =
+    d.toLocaleDateString('en-AE', opts) + ' — Warehouse shift active';
+}
+
+/* ══ TOAST ══ */
+function toast(msg, type='') {
+  const el = document.getElementById('toast');
+  el.textContent = ''; el.textContent = msg;
+  el.className = `toast show ${type}`;
+  clearTimeout(el._t);
+  el._t = setTimeout(() => { el.className = 'toast'; }, 3800);
+}
+
+/* ══ API ══ */
+async function api(path, method='GET', body=null) {
+  try {
+    const opts = { method, headers: {'Content-Type':'application/json'} };
+    if (body) opts.body = JSON.stringify(body);
+    const res = await fetch(API + path, opts);
+    if (!res.ok) throw new Error(res.status);
+    const data = await res.json();
+    setDbOnline(true);
+    return data;
+  } catch(e) {
+    setDbOnline(false);
+    return null;
+  }
+}
+
+function setDbOnline(ok) {
+  document.getElementById('db-dot').className = 'system-dot ' + (ok ? 'online' : 'offline');
+  document.getElementById('db-state').textContent = ok ? 'ONLINE' : 'ERROR';
+}
+
+function markUpdated() {
+  document.getElementById('last-updated').textContent =
+    'Updated ' + new Date().toLocaleTimeString('en-GB', {hour:'2-digit',minute:'2-digit',second:'2-digit'});
+}
+
+/* ══ BADGE ══ */
+function badge(txt) {
+  if (!txt) return '<span class="badge badge-gray">—</span>';
+  const map = {
+    'CRITICAL':'badge-red', 'EXPIRED':'badge-red', 'EXPIRES SOON':'badge-red',
+    'REORDER NOW':'badge-amber', 'EXPIRING SHORTLY':'badge-amber',
+    'WARN':'badge-amber', 'warn':'badge-amber',
+    'ADEQUATE':'badge-green', 'OK':'badge-green',
+    'STOCK SUFFICIENT':'badge-green', 'SUFFICIENT — No action needed':'badge-green',
+    'queued':'badge-teal', 'in_progress':'badge-amber',
+    'completed':'badge-green', 'failed':'badge-red', 'cancelled':'badge-gray',
+    'OTC':'badge-green', 'RX':'badge-blue',
+    'active':'badge-teal', 'pending':'badge-amber', 'dispensed':'badge-green',
+    'URGENT REORDER':'badge-red', 'REORDER RECOMMENDED':'badge-amber',
+    'URGENT — Order immediately':'badge-red',
+    'RECOMMENDED — Order within 3 days':'badge-amber',
+    'MONITOR — May need reorder':'badge-blue',
+    'PENDING_APPROVAL':'badge-amber',
+    'DELIVERED':'badge-green', 'CANCELLED':'badge-gray',
+    'critical':'badge-red', 'warning':'badge-amber', 'info':'badge-blue',
+    'PICK':'badge-teal', 'PLACE':'badge-purple',
+  };
+  return `<span class="badge ${map[txt]||'badge-gray'}">${txt}</span>`;
+}
+
+/* ══ NAV ══ */
+const titles = {
+  dashboard:'Dashboard', dispense:'Dispense & Robot Control',
+  stock:'Stock Status', expiry:'Expiry Risk', reorder:'Reorder List',
+  medicines:'Medicine Database', forecasts:'AI Demand Forecasts',
+  orders:'Purchase Orders', alerts:'Alerts',
+  prescriptions:'Prescriptions', suppliers:'Suppliers',
+};
+
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  const pg = document.getElementById('page-' + name);
+  if (pg) pg.classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(n => {
+    if ((n.getAttribute('onclick')||'').includes(`'${name}'`)) n.classList.add('active');
+  });
+  document.getElementById('topbar-title').textContent = titles[name] || name;
+  currentPage = name;
+  loadPage(name);
+  clearInterval(autoRefreshInterval);
+  if (name === 'dashboard') autoRefreshInterval = setInterval(loadDashboard, 15000);
+  if (name === 'dispense')  autoRefreshInterval = setInterval(loadQueuedTasks, 10000);
+}
+
+function refreshCurrentPage() { loadPage(currentPage); toast('Refreshed'); }
+
+function loadPage(name) {
+  const fn = {
+    dashboard: loadDashboard,
+    stock:     loadStock,
+    expiry:    loadExpiry,
+    reorder:   loadReorder,
+    medicines: loadMedicines,
+    forecasts: loadForecasts,
+    orders:    loadOrders,
+    alerts:    loadAlerts,
+    dispense:  () => loadQueuedTasks(),
+    prescriptions: () => loadRxList(),
+    suppliers: loadSuppliers,
+  }[name];
+  if (fn) fn();
+}
+
+/* ══ TABLE UTILS ══ */
+function filterTable(id, q) {
+  const wrap = document.getElementById(id + '-wrap') || document.getElementById(id);
+  if (!wrap) return;
+  wrap.querySelectorAll('tbody tr').forEach(tr => {
+    tr.style.display = tr.textContent.toLowerCase().includes(q.toLowerCase()) ? '' : 'none';
+  });
+}
+function filterByStatus(id, val, col) {
+  const wrap = document.getElementById(id + '-wrap') || document.getElementById(id);
+  if (!wrap) return;
+  wrap.querySelectorAll('tbody tr').forEach(tr => {
+    const cell = tr.cells[col];
+    tr.style.display = (!val || (cell && cell.textContent.includes(val))) ? '' : 'none';
+  });
+}
+
+function makeTable(heads, rows) {
+  if (!rows || rows.length === 0) return '';
+  return `<table><thead><tr>${heads.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table>`;
+}
+
+/* ══ DASHBOARD ══ */
+async function loadDashboard() {
+  setDashDate();
+  const [stock, expiry, tasks, forecasts, orders] = await Promise.all([
+    api('/inventory/stock-status'),
+    api('/inventory/expiry-risk'),
+    api('/tasks/queued'),
+    api('/forecasts'),
+    api('/orders/pending'),
+  ]);
+
+  const critical = (stock||[]).filter(r=>r.stock_status==='CRITICAL').length;
+  const reorder  = (stock||[]).filter(r=>r.stock_status==='REORDER NOW').length;
+  const expCount = (expiry||[]).length;
+  const taskCount= (tasks||[]).length;
+  const ordCount = (orders||{}).count || 0;
+
+  document.getElementById('sv-total').textContent    = allMeds.length || '—';
+  document.getElementById('sv-critical').textContent = critical;
+  document.getElementById('sv-reorder').textContent  = reorder;
+  document.getElementById('sv-expiry').textContent   = expCount;
+  document.getElementById('sv-tasks').textContent    = taskCount;
+  document.getElementById('sv-orders').textContent   = ordCount;
+
+  // color stat cards dynamically
+  document.getElementById('sc-critical').className = `stat-card ${critical>0?'flagged':'ok'}`;
+  document.getElementById('sc-reorder').className  = `stat-card ${reorder>0?'warn':'ok'}`;
+  document.getElementById('sc-expiry').className   = `stat-card ${expCount>0?'warn':'ok'}`;
+  document.getElementById('sc-tasks').className    = `stat-card ${taskCount>0?'':'ok'}`;
+  document.getElementById('sc-orders').className   = `stat-card ${ordCount>0?'warn':''}`;
+
+  updateBadges(critical, expCount, ordCount, 0);
+
+  // Critical table
+  const crit = (stock||[]).filter(r=>r.stock_status==='CRITICAL').slice(0,8);
+  document.getElementById('dash-critical').innerHTML = crit.length ?
+    makeTable(['Medicine','Stock','Safety Stock','Status'],
+      crit.map(r=>`<tr><td class="td-strong">${r.generic_name}</td><td style="color:var(--red);font-weight:700">${r.current_stock}</td><td>${r.safety_stock_qty}</td><td>${badge('CRITICAL')}</td></tr>`)) :
+    `<div class="empty-state"><div class="empty-icon">✅</div><div class="empty-text">No critical stock</div><div class="empty-sub">All medicines above safety stock level</div></div>`;
+
+  // Expiry
+  const exp = (expiry||[]).slice(0,8);
+  document.getElementById('dash-expiry').innerHTML = exp.length ?
+    makeTable(['Medicine','Days Left','Batch','Qty','Status'],
+      exp.map(r=>`<tr class="${r.days_until_expiry<=0?'expired':r.days_until_expiry<=30?'exp-soon':''}">
+        <td class="td-strong">${r.generic_name}</td>
+        <td><strong style="color:${r.days_until_expiry<=30?'var(--red)':'var(--amber)'}">${r.days_until_expiry}</strong></td>
+        <td class="td-mono">${(r.barcode||'—').slice(0,12)}</td>
+        <td>${r.quantity_current}</td>
+        <td>${badge(r.expiry_status)}</td></tr>`)) :
+    `<div class="empty-state"><div class="empty-icon">✅</div><div class="empty-text">No expiry alerts</div></div>`;
+
+  // Tasks
+  document.getElementById('dash-tasks').innerHTML = (tasks||[]).length ?
+    (tasks||[]).slice(0,8).map(r=>`<div class="task-row">
+      <span class="task-id">${(r.task_id||'').slice(0,8)}…</span>
+      <span class="task-med">${r.generic_name||'—'}</span>
+      <span class="task-loc">${r.bin_code||'—'}</span>
+      <span>${badge(r.task_type||'PICK')}</span>
+      <span class="task-qty">×${r.quantity_requested||1}</span>
+    </div>`).join('') :
+    `<div class="empty-state"><div class="empty-icon">✅</div><div class="empty-text">Queue is empty</div><div class="empty-sub">No tasks waiting for robot</div></div>`;
+
+  // Forecast bars
+  const fc = (forecasts||[]).slice(0,8);
+  const maxD = Math.max(...fc.map(r=>r.predicted_demand||0), 1);
+  document.getElementById('dash-forecast').innerHTML = fc.length ?
+    fc.map(r=>`<div class="forecast-item">
+      <div class="forecast-top"><span class="forecast-name">${r.generic_name}</span><span class="forecast-num">${Math.round(r.predicted_demand)}</span></div>
+      <div class="forecast-track"><div class="forecast-fill" style="width:${Math.round(r.predicted_demand/maxD*100)}%"></div></div>
+    </div>`).join('') :
+    `<div class="empty-state"><div class="empty-icon">🤖</div><div class="empty-text">No forecasts yet</div><div class="empty-sub">Run forecasting_model.py to generate predictions</div></div>`;
+
+  markUpdated();
+}
+
+function updateBadges(critical, expiry, orders, alerts) {
+  const bc = document.getElementById('badge-critical');
+  const be = document.getElementById('badge-expiry');
+  const bo = document.getElementById('badge-orders');
+  const ba = document.getElementById('badge-alerts');
+  bc.textContent = critical; bc.className = `nav-badge ${critical>0?'':'hidden'}`;
+  be.textContent = expiry;   be.className = `nav-badge amber ${expiry>0?'':'hidden'}`;
+  bo.textContent = orders;   bo.className = `nav-badge amber ${orders>0?'':'hidden'}`;
+  ba.textContent = alerts;   ba.className = `nav-badge ${alerts>0?'':'hidden'}`;
+}
+
+/* ══ STOCK ══ */
+async function loadStock() {
+  const data = await api('/inventory/stock-status');
+  const wrap = document.getElementById('tbl-stock-wrap');
+  if (!data || !data.length) { wrap.innerHTML = `<div class="empty-state"><div class="empty-text">No stock data available</div></div>`; return; }
+  document.getElementById('stock-count').textContent = data.length + ' medicines';
+  wrap.innerHTML = makeTable(
+    ['Medicine','Form','Strength','Bin','Stock','Reorder Point','Safety Stock','Status'],
+    data.map(r=>`<tr>
+      <td class="td-strong">${r.generic_name}</td>
+      <td>${r.dosage_form||'—'}</td><td>${r.strength||'—'}</td>
+      <td class="td-mono">${r.bin_location||'—'}</td>
+      <td><strong style="color:${r.stock_status==='CRITICAL'?'var(--red)':r.stock_status==='REORDER NOW'?'var(--amber)':'var(--green)'}">${r.current_stock}</strong></td>
+      <td>${r.reorder_point}</td><td>${r.safety_stock_qty}</td>
+      <td>${badge(r.stock_status)}</td></tr>`)
+  );
+}
+
+/* ══ EXPIRY ══ */
+async function loadExpiry() {
+  const data = await api('/inventory/expiry-risk');
+  const wrap = document.getElementById('tbl-expiry-wrap');
+  if (!data || !data.length) {
+    wrap.innerHTML = `<div class="empty-state"><div class="empty-icon">✅</div><div class="empty-text">No batches expiring within 90 days</div></div>`;
+    return;
+  }
+  document.getElementById('badge-expiry').textContent = data.length;
+  if (data.length > 0) document.getElementById('badge-expiry').className = 'nav-badge amber';
+  wrap.innerHTML = makeTable(
+    ['Medicine','Batch / Barcode','Bin','Qty','Expiry Date','Days Left','Status'],
+    data.map(r=>`<tr class="${r.days_until_expiry<=0?'expired':r.days_until_expiry<=30?'exp-soon':''}">
+      <td class="td-strong">${r.generic_name}</td>
+      <td class="td-mono">${r.barcode||'—'}</td>
+      <td class="td-mono">${r.bin_location||'—'}</td>
+      <td>${r.quantity_current}</td>
+      <td>${r.expiry_date}</td>
+      <td><strong style="color:${r.days_until_expiry<=30?'var(--red)':'var(--amber)'}">${r.days_until_expiry}</strong></td>
+      <td>${badge(r.expiry_status)}</td></tr>`)
+  );
+}
+
+/* ══ REORDER ══ */
+async function loadReorder() {
+  const data = await api('/inventory/reorder-needed');
+  const wrap = document.getElementById('tbl-reorder-wrap');
+  if (!data || !data.length) {
+    wrap.innerHTML = `<div class="empty-state"><div class="empty-icon">✅</div><div class="empty-text">All medicines above reorder point</div></div>`;
+    return;
+  }
+  wrap.innerHTML = makeTable(
+    ['Medicine','Strength','Current Stock','Reorder Point','Recommended Qty','Supplier','Lead Time'],
+    data.map(r=>`<tr>
+      <td class="td-strong">${r.generic_name}</td>
+      <td>${r.strength||'—'}</td>
+      <td><strong style="color:var(--red)">${r.current_stock}</strong></td>
+      <td>${r.reorder_point}</td>
+      <td><strong style="color:var(--teal-700)">${r.recommended_order_qty}</strong></td>
+      <td>${r.preferred_supplier||'—'}</td>
+      <td>${r.avg_lead_time_days} days</td></tr>`)
+  );
+}
+
+/* ══ MEDICINES ══ */
+async function loadMedicines() {
+  const data = await api('/medicines');
+  if (!data) return;
+  allMeds = data;
+  document.getElementById('sv-total').textContent = data.length;
+  document.getElementById('meds-count').textContent = data.length + ' medicines';
+  document.getElementById('tbl-meds-wrap').innerHTML = makeTable(
+    ['Generic Name','Brand','Category','Form','Strength','Controlled','Type'],
+    data.map(r=>`<tr>
+      <td class="td-strong">${r.generic_name}</td>
+      <td>${r.brand_name||'—'}</td>
+      <td><span class="tag">${r.category||'—'}</span></td>
+      <td>${r.dosage_form||'—'}</td>
+      <td>${r.strength||'—'}</td>
+      <td>${r.controlled_substance?'<span style="color:var(--red);font-weight:700">⚠ Yes</span>':'No'}</td>
+      <td>${badge(r.drug_class&&r.drug_class.length>3?'RX':'OTC')}</td></tr>`)
+  );
+}
+
+/* ══ FORECASTS ══ */
+async function loadForecasts() {
+  const [fc, recs] = await Promise.all([api('/forecasts'), api('/forecasts/reorder-recommendations')]);
+
+  if (!fc || fc.length === 0) {
+    document.getElementById('forecast-bars').innerHTML =
+      `<div class="empty-state"><div class="empty-icon">🤖</div><div class="empty-text">No forecasts generated yet</div><div class="empty-sub">Run <code style="font-family:var(--mono)">python forecasting_model.py</code> to train the model and generate predictions</div></div>`;
+  } else {
+    const maxD = Math.max(...fc.map(r=>r.predicted_demand||0), 1);
+    document.getElementById('forecast-bars').innerHTML = fc.map(r=>`<div class="forecast-item">
+      <div class="forecast-top">
+        <span class="forecast-name">${r.generic_name} <span style="font-weight:400;font-size:11px;color:var(--text-dim)">${r.strength||''}</span></span>
+        <span class="forecast-num">${Math.round(r.predicted_demand)} units</span>
+      </div>
+      <div class="forecast-track"><div class="forecast-fill" style="width:${Math.round(r.predicted_demand/maxD*100)}%"></div></div>
+      <div class="forecast-meta">
+        <span>Stock: ${r.current_stock} | MAPE: ${r.mape_score}%</span>
+        ${badge(r.ai_recommendation)}
+      </div>
+    </div>`).join('');
+  }
+
+  if (!recs || recs.length === 0) {
+    document.getElementById('tbl-recs-wrap').innerHTML =
+      `<div class="empty-state"><div class="empty-text">No recommendations available</div></div>`;
+  } else {
+    document.getElementById('tbl-recs-wrap').innerHTML = makeTable(
+      ['Medicine','30-Day Forecast','Current Stock','Shortfall','Supplier','Action'],
+      recs.map(r=>`<tr>
+        <td class="td-strong">${r.generic_name}</td>
+        <td>${Math.round(r.predicted_30_day_demand)}</td>
+        <td>${r.current_stock}</td>
+        <td><strong style="color:${r.shortfall>0?'var(--red)':'var(--green)'}">${Math.round(r.shortfall)}</strong></td>
+        <td>${r.supplier||'—'}</td>
+        <td>${badge(r.action)}</td></tr>`)
+    );
+  }
+}
+
+/* ══ ORDERS ══ */
+async function loadOrders() {
+  const data = await api('/orders/pending');
+  const card = document.getElementById('orders-card');
+  const orders = (data||{}).orders || [];
+  document.getElementById('badge-orders').textContent = orders.length;
+  document.getElementById('badge-orders').className = `nav-badge amber ${orders.length>0?'':'hidden'}`;
+  if (!orders.length) {
+    card.innerHTML = `<div class="empty-state"><div class="empty-icon">✅</div><div class="empty-text">No pending purchase orders</div><div class="empty-sub">System will auto-create orders when stock triggers the reorder point</div></div>`;
+    return;
+  }
+  card.innerHTML = orders.map(o=>`<div class="po-row">
+    <div style="flex:1"><div style="font-weight:700;font-size:13px">${o.medicine_name}</div>
+    <div style="font-size:11.5px;color:var(--text-muted)">Qty: ${o.quantity} · Created: ${(o.created_at||'').slice(0,16)}</div></div>
+    ${badge('PENDING_APPROVAL')}
+    <button class="btn-approve" onclick="toast('Approval workflow coming soon','warn')">Approve</button>
+  </div>`).join('');
+}
+
+/* ══ ALERTS ══ */
+async function loadAlerts() {
+  const data = await api('/alerts');
+  const alerts = data || [];
+  document.getElementById('badge-alerts').textContent = alerts.length;
+  document.getElementById('badge-alerts').className = `nav-badge ${alerts.length>0?'':'hidden'}`;
+  if (!alerts.length) {
+    document.getElementById('alerts-list').innerHTML = `<div class="empty-state"><div class="empty-icon">✅</div><div class="empty-text">No open alerts</div></div>`;
+    return;
+  }
+  document.getElementById('alerts-list').innerHTML = alerts.map(a=>`<div class="alert-row">
+    <div class="alert-sev ${a.severity||'info'}"></div>
+    <div>
+      <div class="alert-msg">${a.message||'—'} — <strong>${a.generic_name||'—'}</strong></div>
+      <div class="alert-meta">
+        ${badge(a.alert_type||'')} ${badge(a.severity||'')}
+        <span>Bin: ${a.bin_code||'—'}</span>
+        <span>${(a.created_at||'').slice(0,16)}</span>
+      </div>
+    </div>
+  </div>`).join('');
+}
+
+/* ══ ROBOT TASKS ══ */
+async function loadQueuedTasks() {
+  const data = await api('/tasks/queued');
+  const el = document.getElementById('queue-list');
+  if (!el) return;
+  el.innerHTML = (data||[]).length ?
+    (data||[]).map(r=>`<div class="task-row">
+      <span class="task-id">${(r.task_id||'').slice(0,8)}…</span>
+      <span class="task-med">${r.generic_name||'—'}</span>
+      <span class="task-loc">Bin ${r.bin_code||'—'} · Aisle ${r.aisle||'—'}</span>
+      <span>${badge(r.task_type||'PICK')}</span>
+      <span class="task-qty">×${r.quantity_requested||1}</span>
+    </div>`).join('') :
+    `<div class="empty-state"><div class="empty-icon">✅</div><div class="empty-text">Queue empty</div></div>`;
+}
+
+/* ══ PRESCRIPTIONS ══ */
+async function loadRxList() {
+  const data = await api('/prescriptions');
+  document.getElementById('tbl-rx-wrap').innerHTML = (data||[]).length ?
+    makeTable(['Prescription ID','Patient','Allergy','Medicine','Qty','Status','Issued'],
+      data.map(r=>`<tr>
+        <td class="td-mono">${(r.prescription_id||'').toString().slice(0,10)}</td>
+        <td>${r.patient_code||'—'}</td>
+        <td>${r.allergy_flags?'<span style="color:var(--red);font-weight:700">⚠ YES</span>':'—'}</td>
+        <td class="td-strong">${r.brand_name||'—'}</td>
+        <td>${r.quantity_prescribed||'—'}</td>
+        <td>${badge(r.status||'')}</td>
+        <td style="font-size:11.5px;color:var(--text-muted)">${(r.issued_date||'').slice(0,10)}</td></tr>`)) :
+    `<div class="empty-state"><div class="empty-text">No prescriptions found</div></div>`;
+}
+
+async function lookupRx() {
+  const id = document.getElementById('rx-input').value.trim();
+  if (!id) return;
+  const data = await api('/prescriptions/' + encodeURIComponent(id));
+  const el = document.getElementById('rx-result');
+  el.style.display = 'block';
+  if (!data || !data.length) {
+    el.innerHTML = `<div style="color:var(--red);font-weight:700">No prescription found for ID: ${id}</div>`; return;
+  }
+  const r = data[0];
+  el.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+      <div style="font-size:17px;font-weight:800;letter-spacing:-.3px">Prescription #${r.prescription_id}</div>
+      ${badge(r.status||'')}
+    </div>
+    ${r.allergy_flags?`<div class="rx-allergy">⚠ Allergy Alert: ${r.allergy_flags}</div>`:''}
+    <div class="rx-grid">
+      <div class="rx-field"><label>Patient Code</label><span>${r.patient_code||'—'}</span></div>
+      <div class="rx-field"><label>Date of Birth</label><span>${(r.date_of_birth||'—').slice(0,10)}</span></div>
+      <div class="rx-field"><label>Prescriber</label><span>${r.prescriber_name||'—'}</span></div>
+      <div class="rx-field"><label>Medicine</label><span>${r.generic_name||'—'}</span></div>
+      <div class="rx-field"><label>Brand / Form</label><span>${r.brand_name||'—'} · ${r.dosage_form||'—'}</span></div>
+      <div class="rx-field"><label>Strength</label><span>${r.strength||'—'}</span></div>
+      <div class="rx-field"><label>Qty Prescribed</label><span>${r.quantity_prescribed||'—'}</span></div>
+      <div class="rx-field"><label>Stock Available</label><span style="color:${(r.stock_available||0)>0?'var(--green)':'var(--red)'}"><strong>${r.stock_available||0}</strong> units</span></div>
+      <div class="rx-field"><label>Issued</label><span>${(r.issued_date||'—').slice(0,10)}</span></div>
+    </div>`;
+}
+
+/* ══ SUPPLIERS ══ */
+async function loadSuppliers() {
+  const data = await api('/suppliers');
+  document.getElementById('tbl-sup-wrap').innerHTML = (data||[]).length ?
+    makeTable(['Supplier','Contact Email','Avg Lead Time','Reliability','Preferred'],
+      data.map(r=>`<tr>
+        <td class="td-strong">${r.name}</td>
+        <td style="font-size:12px;color:var(--text-muted)">${r.contact_email||'—'}</td>
+        <td>${r.avg_lead_time_days} days</td>
+        <td>
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="width:70px;height:5px;background:var(--slate-100);border-radius:3px;overflow:hidden">
+              <div style="width:${Math.round((r.reliability_score||0)*100)}%;height:100%;background:${(r.reliability_score||0)>=.9?'var(--green)':'var(--amber)'};border-radius:3px"></div>
+            </div>
+            <span style="font-size:12px;font-weight:700">${Math.round((r.reliability_score||0)*100)}%</span>
+          </div>
+        </td>
+        <td>${r.preferred_supplier?'⭐ Preferred':'—'}</td></tr>`)) :
+    `<div class="empty-state"><div class="empty-text">No suppliers found</div></div>`;
+}
+
+/* ══ DISPENSE AUTOCOMPLETE ══ */
+function onDispenseSearch(q) {
+  const list = document.getElementById('autocomplete-list');
+  if (q.length < 2) { list.style.display='none'; clearStockCheck(); return; }
+  const matches = allMeds.filter(m=>
+    (m.generic_name||'').toLowerCase().includes(q.toLowerCase()) ||
+    (m.brand_name||'').toLowerCase().includes(q.toLowerCase())
+  ).slice(0,10);
+  if (!matches.length) { list.style.display='none'; return; }
+  list.style.display = 'block';
+  list.innerHTML = matches.map((m,i)=>`
+    <div class="autocomplete-item" tabindex="0" data-idx="${i}"
+      onclick="selectMedicine('${m.generic_name.replace(/'/g,"\\'")}')"
+      onkeydown="if(event.key==='Enter')selectMedicine('${m.generic_name.replace(/'/g,"\\'")}')">
+      <div class="autocomplete-item-name">${m.generic_name}</div>
+      <div class="autocomplete-item-sub">${m.brand_name||''} · ${m.strength||''} · ${m.dosage_form||''} · ${badge(m.drug_class&&m.drug_class.length>3?'RX':'OTC')}</div>
+    </div>`).join('');
+}
+
+function dispenseKeydown(e) {
+  const list = document.getElementById('autocomplete-list');
+  if (e.key === 'ArrowDown') {
+    const first = list.querySelector('.autocomplete-item'); if (first) first.focus(); e.preventDefault();
+  }
+  if (e.key === 'Escape') { list.style.display='none'; clearStockCheck(); }
+}
+
+function selectMedicine(name) {
+  document.getElementById('dispense-name').value = name;
+  document.getElementById('autocomplete-list').style.display = 'none';
+  checkStock(name);
+}
+
+async function checkStock(name) {
+  const bar = document.getElementById('stock-check-bar');
+  bar.style.display = 'flex';
+  bar.className = 'stock-check-bar';
+  bar.textContent = 'Checking stock…';
+  const data = await api('/inventory/stock-status');
+  const med = (data||[]).find(r=>r.generic_name===name);
+  if (!med) { bar.className='stock-check-bar warn'; bar.textContent='⚠ Medicine not found in stock system'; return; }
+  if (med.stock_status==='CRITICAL') { bar.className='stock-check-bar danger'; bar.textContent=`⚠ Critical stock — only ${med.current_stock} units available`; }
+  else if (med.stock_status==='REORDER NOW') { bar.className='stock-check-bar warn'; bar.textContent=`⚠ Low stock — ${med.current_stock} units (below reorder point)`; }
+  else { bar.className='stock-check-bar ok'; bar.textContent=`✓ Stock OK — ${med.current_stock} units available`; }
+}
+
+function clearStockCheck() {
+  document.getElementById('stock-check-bar').style.display = 'none';
+}
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('#autocomplete-list') && !e.target.closest('#dispense-name'))
+    document.getElementById('autocomplete-list').style.display = 'none';
+});
+
+/* ══ DISPENSE ACTION ══ */
+async function doDispense() {
+  const name = document.getElementById('dispense-name').value.trim();
+  const qty  = parseInt(document.getElementById('dispense-qty').value)||1;
+  if (!name) { toast('Enter a medicine name', 'error'); return; }
+  if (qty < 1) { toast('Quantity must be at least 1', 'error'); return; }
+
+  const btn = document.getElementById('btn-dispense');
+  btn.textContent = 'Sending to IM-Bot…'; btn.disabled = true;
+
+  const data = await api('/dispense', 'POST', { medicine_name: name, quantity: qty });
+  const resEl = document.getElementById('dispense-result');
+  const titleEl = document.getElementById('disp-res-title');
+  const bodyEl  = document.getElementById('disp-res-body');
+  resEl.style.display = 'block';
+
+  if (!data || data.error) {
+    resEl.className = 'dispense-result error';
+    titleEl.textContent = '✗ Dispense Failed';
+    bodyEl.innerHTML = `<p style="font-size:12.5px">${(data&&data.error)||'Could not connect to server. Check that the backend is running.'}</p>`;
+    toast((data&&data.error)||'Server error', 'error');
+  } else {
+    resEl.className = 'dispense-result success';
+    titleEl.textContent = '✓ Task Queued — IM-Bot will pick this now';
+    bodyEl.innerHTML = `
+      <div class="result-row"><span>Medicine</span><span>${data.medicine}</span></div>
+      <div class="result-row"><span>Bin Location</span><span><strong>${data.bin}</strong></span></div>
+      <div class="result-row"><span>Quantity</span><span>${data.quantity} units</span></div>
+      <div class="result-row"><span>Task ID</span><span class="td-mono" style="font-size:11px">${data.task_id}</span></div>`;
+    toast(`Task sent — ${data.medicine} from ${data.bin}`, 'success');
+
+    dispenseHistory.unshift({ name, qty, bin: data.bin, taskId: data.task_id, time: new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}) });
+    renderHistory();
+    document.getElementById('dispense-name').value = '';
+    document.getElementById('dispense-qty').value = '1';
+    document.getElementById('dispense-notes').value = '';
+    clearStockCheck();
+    setTimeout(loadQueuedTasks, 800);
+  }
+
+  btn.textContent = 'Send to IM-Bot →'; btn.disabled = false;
+}
+
+function renderHistory() {
+  const el = document.getElementById('dispense-history');
+  el.innerHTML = `<div class="history-list">` +
+    dispenseHistory.slice(0,8).map((h,i)=>`
+      <div class="history-item">
+        <div class="history-index">${i+1}</div>
+        <div style="flex:1">
+          <div class="history-med">${h.name}</div>
+          <div class="history-meta">Bin: ${h.bin||'—'} · ×${h.qty} · ${h.time}</div>
+        </div>
+        ${badge('completed')}
+      </div>`).join('') +
+    `</div>`;
+}
+
+/* ══ KEYBOARD SHORTCUT: / to focus dispense ══ */
+document.addEventListener('keydown', e => {
+  if (e.key === '/' && !['INPUT','TEXTAREA'].includes(e.target.tagName)) {
+    e.preventDefault();
+    showPage('dispense');
+    setTimeout(() => document.getElementById('dispense-name').focus(), 100);
+  }
+});
+
+/* ══ ROBOT STATUS POLL ══ */
+async function pollRobotStatus() {
+  const data = await api('/robots/status');
+  if (!data || !data.length) return;
+  data.forEach(r => {
+    const name = (r.robot_name||r.name||'').toLowerCase();
+    if (name.includes('im') || name.includes('uno')) {
+      document.getElementById('imbot-state').textContent = (r.status||'IDLE').toUpperCase();
+      document.getElementById('sys-imbot').querySelector('.system-dot').className =
+        'system-dot ' + (r.status==='active'||r.status==='busy'?'busy':'online');
+    }
+    if (name.includes('d-bot')||name.includes('dbot')) {
+      document.getElementById('dbot-state').textContent = (r.status||'IDLE').toUpperCase();
+    }
+  });
+}
+setInterval(pollRobotStatus, 12000);
+
+/* ══ INIT ══ */
+async function init() {
+  allMeds = await api('/medicines') || [];
+  document.getElementById('sv-total').textContent = allMeds.length || '—';
+  loadDashboard();
+  autoRefreshInterval = setInterval(loadDashboard, 15000);
+  pollRobotStatus();
+}
+init();
+</script>
+</body>
+</html>
