@@ -1,0 +1,379 @@
+medicine_id,generic_name,brand_name,sku
+1,Paracetamol,Panadol,e98ab84c-038f-4c26-a6df-8a317e95dc24
+2,Paracetamol+Caffeine,Panadol Extra,807210d7-2815-45f5-800f-cb4bce1650ea
+3,Paracetamol,Panadol Syrup,d4214cb7-628d-4ccc-9512-f97f563d3153
+4,Paracetamol,Calpol,2b36c7f5-19c5-4130-ad3d-10d23c70fe0c
+5,Paracetamol,Febrilex,709cda2d-5f09-4702-b844-64d785a5f582
+6,Paracetamol,Tempra,d069ea6c-2b86-44f9-9582-549d5d8ca751
+7,Paracetamol,Paramol,2eac534d-a405-4d68-a6c2-2f22a59e0207
+8,Paracetamol,Acepar,0c60bd64-edde-4956-993a-ddc038c4bb8b
+9,Diclofenac,Voltaren,77d5f51a-aa86-4d62-831b-44ae584fbbbf
+10,Diclofenac,Voltaren Gel,a36d01c6-0bdb-47e9-b940-cc93924bed24
+11,Diclofenac,Cataflam,5cc92fd2-338b-4694-a373-409a1c414048
+12,Diclofenac,Diclac,f5aa1493-35bd-4c5e-b7c7-4c12ec0e3ff9
+13,Diclofenac,Olfen,78dbdc3c-f74a-4623-9ee6-125d90e6cbba
+14,Diclofenac,Dicloflam,a338982e-5cef-49cc-abc2-9cd9e862073c
+15,Ibuprofen,Brufen,c2295fdc-2d11-4052-82a6-9702ae0878ab
+16,Ibuprofen,Nurofen,e29343b6-7844-4835-8277-e4767e8fd442
+17,Ibuprofen,Nurofen Syrup,27ff5ff3-f164-47c3-b212-819a42b6eee8
+18,Ibuprofen,Advil,d139bca9-55b1-423b-9fad-b9de721f11c4
+19,Ibuprofen,Ibufen,2a1b39ec-fa15-4b8b-9533-6d593cc2c9ef
+20,Ibuprofen,Motrin,2f596ad8-5917-4e6e-8e24-362ac1c554da
+21,Ibuprofen,Ipren,782d4d9a-cb1d-4eb8-ab77-e9e0858e2c7b
+22,Acetylsalicylic Acid,Aspirin,36a58c3d-f5bd-4ba4-ab02-d4e0f93eb2c1
+23,Acetylsalicylic Acid,Aspirin Protect,70d2cb51-d157-4d98-8f63-a0d07958e121
+24,Acetylsalicylic Acid,Cardiprin,efa0fc9f-951f-499d-a9b5-ce6fd6b2ef38
+25,Acetylsalicylic Acid,Disprin,c31a6362-ebf4-4f7e-a6c3-aa151fed0e77
+26,Diazepam,Valium,0add9d33-2175-4d07-924a-8691ad009440
+27,Clonazepam,Rivotril,c6a057b5-d8f3-4b97-81fc-0f726fc58361
+28,Alprazolam,Xanax,8ad02cf9-16e2-4b5d-8a22-f818e1fc5a02
+29,Bromazepam,Lexotanil,ef5f9a88-4964-48a6-83cb-7871341a684d
+30,Lorazepam,Ativan,679ecfa9-90a4-4749-9f22-44f11f2b4d96
+31,Salbutamol,Ventolin,6ff9d366-e61a-4858-a75e-0d61a570cbb7
+32,Budesonide+Formoterol,Symbicort,d7720dae-0510-41dd-87de-7213bf556ce3
+33,Fluticasone+Salmeterol,Seretide,316d4644-623d-4588-8b60-c97bc0fc336a
+34,Fluticasone,Flixotide,72788020-80f5-4446-bee8-a88a22b9b0cb
+35,Tiotropium,Spiriva,a20c55a6-a838-4c0d-9492-8f3c03054a92
+36,Montelukast,Singulair,b5f819f8-8fb2-4176-a720-a3b90bac7f7d
+37,Ipratropium,Atrovent,ce4b4e09-cba3-42cb-8892-d359f2295f42
+38,Ambroxol,Mucosolvan,b0efff49-67a5-4b89-a55e-468046d220a4
+39,Bromhexine,Bisolvon,7a7ad3b5-2f8f-4a9a-9edd-a63987d0ef7a
+40,Amoxicillin+Clavulanate,Augmentin,ba3e9ef5-7c83-491b-88a1-2dc7634415a3
+41,Amoxicillin,Amoxil,fed604d6-6bc3-4095-84c3-42ce5f7cd442
+42,Azithromycin,Zithromax,44bad5c9-f21b-4abf-a73e-b2e5fde8e272
+43,Cefalexin,Keflex,c19c4173-56a6-43f6-90df-8adf3f7e642a
+44,Ciprofloxacin,Ciprobay,322d2244-777c-4cd4-b3c1-0d5e5f23faa1
+45,Metronidazole,Flagyl,71c3973e-51d7-4bf2-becd-5ed8fb3c6b6f
+46,Doxycycline,Doxycycline,fa17f201-8b45-4603-b484-de6d307afa74
+47,Clarithromycin,Klacid,01dbd383-d2a3-4dc2-9171-4bb29049daa3
+48,Amlodipine,Norvasc,cdb3c50b-4cf4-4834-8f2f-fa6c06fff77c
+49,Bisoprolol,Concor,651dc562-7d31-4962-8285-2a880e819b36
+50,Lisinopril,Lisinopril,99da45ac-b6c4-4711-9b7f-6f372dca7019
+51,Losartan,Cozaar,77e21491-54ec-49fb-8c7b-955cc41d6fea
+52,Ramipril,Ramipril,ad5e1375-95f8-4778-ad04-64a83a03b5df
+53,Valsartan,Valsartan,262b5013-3d11-4fb5-811f-97fd615eb769
+54,Amlodipine,Amlodipine,d75ae606-43e7-47e6-8930-34731fb6a9c2
+55,Atenolol,Atenolol,cbf92668-ea9b-4f61-9bca-d2611ad091ae
+55,Atenolol,Atenolol,e937198f-0b29-4794-88fa-13f68b5ffcae
+56,Atorvastatin,Lipitor,89465032-e9e9-474b-bdf5-92a6f2828c90
+57,Rosuvastatin,Crestor,b26b3ed5-dee5-44bd-b085-0aad4d088ddc
+58,Simvastatin,Zocor,ef24333e-9bca-4a9a-ae07-2039abbb8772
+59,Pravastatin,Pravastatin,1e38f889-3803-4c6e-96c1-4fcc4298e090
+60,Metformin,Glucophage,6052181d-f9c4-4761-9a87-59086d7f78d0
+61,Gliclazide,Diamicron,499b99e8-f923-425b-a4ed-c5b8cb68ce74
+62,Sitagliptin,Januvia,fdbfe1bd-7ec1-4a32-bc90-f77c20ea66d0
+63,Insulin Glargine,Lantus,e3218c84-0a9b-4238-ae77-6fa841500d81
+64,Insulin Aspart,NovoRapid,e040a2e4-4735-4a17-a6b7-8187b7c30ddf
+65,Dapagliflozin,Forxiga,f7c7a5ea-9ddc-4903-82ab-a0ff0281741b
+66,Esomeprazole,Nexium,d32a6f59-d6b6-49fd-ba11-97136cdcd47f
+67,Omeprazole,Losec,ac6ff4a0-a5e8-4106-aa68-973694d37676
+68,Pantoprazole,Pantoprazole,9730b045-2cb7-4281-a84a-ca4c2ad2408b
+69,Domperidone,Motilium,1aa2fe0a-eeee-4404-89b9-ba4346e46d83
+70,Loperamide,Imodium,4d337d9a-415d-46c9-9174-ec341eb379d7
+71,Ranitidine,Zantac,81538152-2ecc-49ac-871a-b13bba075609
+72,Hyoscine,Buscopan,d3114502-2040-4b19-b741-d42fddae8839
+73,Lactulose,Duphalac,f3ddf85e-b313-4814-95f9-757de51fc036
+74,Ascorbic Acid,Vitamin C,e319bab6-f863-469b-bbcc-704b07a0189f
+75,Cholecalciferol,Vitamin D3,886fd422-362b-4a17-977e-4e31a5ab2ac4
+76,Zinc,Zinc Sulfate,08868ce8-68bb-49f6-ae00-601c23d7d59e
+77,Ferrous Sulfate,Iron Supplement,a67b9b8f-cfa5-44be-ad7f-8463af4433b6
+78,Folic Acid,Folic Acid,88c7a7ca-b8c2-4aaf-9182-d53e7b50360b
+78,Folic Acid,Folic Acid,b6d6a5c3-e1cf-4928-a369-f7f9699ffb52
+79,Fish Oil,Omega-3,959a02e5-709d-4e0f-ba44-458c34bfed13
+80,Multivitamin,Multivitamin,3518aedc-92d3-4db4-8914-f09dc3bbdf2c
+81,Calcium Carbonate+D3,Calcium+D3,52092e3e-b426-4041-95f8-8d01ca958c0f
+82,Loratadine,Claritin,9b54c8a8-cace-429a-9f61-96d4516ec484
+83,Cetirizine,Zyrtec,3669d67b-4836-4572-8aab-816f5469b77e
+84,Fexofenadine,Telfast,6d52db86-05fd-4a7f-9137-4ceb4d088cd5
+85,Promethazine,Phenergan,cf059cb9-2034-4722-9cd4-4092e21b0ea1
+86,Dexchlorpheniramine,Polaramine,0501cc9a-898f-49de-b12b-ee531af5a7d7
+87,Fexofenadine,Allegra,79ed45d0-8d35-4c6d-8c76-68da4f260012
+88,Betamethasone,Betnovate,ede50e16-4639-4406-8a7d-65b8a93efd48
+89,Hydrocortisone,Hydrocortisone,107e6bc4-a1cd-4a21-8cfb-1a61267817e9
+89,Hydrocortisone,Hydrocortisone,03ec0cdc-a39c-4529-9f5f-0e22aee39087
+90,Clotrimazole,Canesten,2041b951-a1cc-432e-a97b-19cb60c21e62
+91,Terbinafine,Lamisil,4b143439-e11a-43a1-b2ed-b4a8a146976a
+92,Fusidic Acid,Fucidin,1c70ac18-f9e9-46f3-9db0-6d2561f2b503
+93,Polyethylene Glycol,Systane,ab4826f6-5fbf-446b-b4f6-7fe086e9f1ae
+94,Tobramycin+Dexamethasone,Tobradex,91e7efa2-7d81-45a0-9055-4342d2edfe03
+95,Xylometazoline,Otrivin,db9c4da9-6c35-4971-b2aa-baf5d72bbd2c
+96,Fluticasone,Flonase,d017f2b4-af6c-45e0-977a-befbb171ce49
+97,Levothyroxine,Synthroid,6022a3b4-48c1-45ed-8a94-33f11604f841
+98,Levothyroxine,Euthyrox,f92378a8-15b0-4aa6-9fc8-099b9e5e5716
+99,Pregabalin,Lyrica,43959724-7aa5-46bd-bea4-aacdcb40ca71
+100,Gabapentin,Neurontin,b0c418cc-9dc1-4150-ba74-cc115000189d
+101,Tramadol,Tramadol,99de17b8-b796-44a5-9a91-1ca2776e02d2
+101,Tramadol,Tramadol,218c3e37-5151-40b4-9b9e-5e6cf03f01ff
+102,Sertraline,Zoloft,6fedc352-f38a-4645-bee0-35096c7284e7
+103,Fluoxetine,Prozac,b711e5ac-e8ca-4e8b-913a-8376f3993e11
+104,Escitalopram,Lexapro,442514b2-821e-4286-9c77-26bb4528003b
+105,Rivaroxaban,Xarelto,003aebce-3feb-43e9-aa7a-50bba500931b
+106,Apixaban,Eliquis,9df458a3-b1fd-41fd-bd52-7fee170b6032
+107,Warfarin,Warfarin,f90a1ba7-79a1-4eb3-bbfb-8ffa86dd72df
+107,Warfarin,Warfarin,a0a5f2ef-4776-4f37-814a-0f782ed75db6
+108,ORS,ORS Sachet,d54c16cd-e231-4c7d-a80e-2e7ce78cf8cf
+109,Povidone Iodine,Povidone Iodine,77f3da46-aa7b-43a2-8ccb-9f9f3f06069d
+110,Chlorhexidine,Chlorhexidine,0e25c3e8-33b0-42e6-a1cb-125579148913
+111,Propranolol,Propranolol,4efef27f-9f6d-46b8-a398-eb63c47e29ed
+112,Sumatriptan,Sumatriptan,b7c02e51-90b2-4507-b112-f98fbed07424
+113,Phenobarbital,Phenobarbital,b6593ae0-4cfa-4eca-b68a-0397396e74ea
+114,Sevoflurane,Sevoflurane,2b7e17c1-f69e-4994-af37-e87c7198b64a
+115,Midazolam,Midazolam,ad651481-393f-4de5-bb27-8b02be03d128
+116,Cetirizine,Cetirizine,86789b80-8849-4c21-8966-b783418ffd20
+117,Epinephrine (Adrenaline),Epinephrine (Adrenaline),cd8232ee-49f7-457b-9d3b-5b9e275ab848
+118,Fexofenadine,Fexofenadine,a5eaaebb-2594-4d8d-a840-d4f522e049f1
+119,Loratadine,Loratadine,ce9539a4-0d27-48ea-9d22-6f004e4fc8d5
+120,Prednisolone,Prednisolone,9b344995-71ca-434f-86a4-681569b6d2e0
+121,Prednisone,Prednisone,048b050d-31df-4afb-a971-edff0aef4eba
+122,Promethazine,Promethazine,658e9cc6-ac4d-49a5-a85d-2f2f752becbe
+123,Acetylcysteine,Acetylcysteine,09c4cd54-2016-4646-9023-b0affc081899
+124,Activated Charcoal,Activated Charcoal,50b8b962-4de0-4cbb-89d3-99e0dc1e5a72
+125,Deferiprone,Deferiprone,18e4d8a7-5266-46d7-959c-ca9f6f409a82
+126,Naltrexone,Naltrexone,c1b2868b-3b01-4171-9393-8825a9550b39
+127,Ivermectin,Ivermectin,b6d93469-5e41-4d1f-a998-7f5854f47f9a
+128,Praziquantel,Praziquantel,554b03e1-3077-4600-94e9-ef8ee220679d
+129,Amoxicillin,Amoxicillin,5407ed78-7a69-4f14-9996-bb6e609b4642
+130,"Amoxicillin, Clavulanic Acid","Amoxicillin, Clavulanic Acid",4c1cabb9-c8d1-4dca-876b-3dcdfc053eab
+131,Azithromycin,Azithromycin,07b21364-5756-4782-a741-046fd0523854
+132,Cefuroxime,Cefuroxime,6fa7e6a5-66d0-473e-9ae0-3621dac9fe0e
+133,Ciprofloxacin,Ciprofloxacin,ce2d62a4-1190-4e99-bef9-35835892edaa
+133,Ciprofloxacin,Ciprofloxacin,e8e6c0b7-0cf8-415d-8a01-9d85021203e9
+134,Clarithromycin,Clarithromycin,ae045b25-e837-434f-a2c5-d1365e01adc4
+135,Clindamycin,Clindamycin,bcac5b28-47e5-4894-8eca-6d81701e7dbf
+135,Clindamycin,Clindamycin,03be0cda-ba00-4790-8009-4a5328b5958d
+136,Clofazimine,Clofazimine,2d67d645-9f1c-4904-9721-3a419e7c7631
+137,Dapsone,Dapsone,0a8d49da-edff-473b-ae0f-6bb51ddfc4d7
+138,Erythromycin,Erythromycin,a836941b-f022-46c0-a687-2fc480241a10
+139,Ethionamide,Ethionamide,882fb666-c4a7-4d39-afc1-9ff64c774375
+140,Isoniazid,Isoniazid,63f30930-9bf5-46ec-842e-bc2b794a991b
+141,Levofloxacin,Levofloxacin,1c0b3115-0a67-45ed-ba75-c6b5607b13a4
+142,Linezolid,Linezolid,8d82ee81-bc77-4446-99bf-e35fdcee70df
+143,Metronidazole,Metronidazole,00d64dfd-ca2f-49e5-ac13-76a5818bc01d
+144,Nalidixic Acid,Nalidixic Acid,c606e49a-cc82-4a10-835c-81d4de71267b
+145,Nitrofurantoin,Nitrofurantoin,eb5ddcb2-17b7-48b9-90f6-68f8f17050f8
+146,Pyrazinamide,Pyrazinamide,b91bf42d-d672-48fd-86f4-ba6262c12fc4
+147,Rifampicin,Rifampicin,9be9a8f1-11d1-4498-96fa-0378dac08357
+148,Tetracycline,Tetracycline,591827a3-3470-4c83-985a-7948238913eb
+149,Trimethoprim,Trimethoprim,227797ec-3b4c-49f2-8d17-d876c218eafb
+150,Clotrimazole,Clotrimazole,e1469d6e-a89c-40a3-9528-1256982ce262
+151,Fluconazole,Fluconazole,f665b428-6ff7-4a07-afc5-af248afc765a
+152,Flucytosine,Flucytosine,f2605464-df88-4d02-9a9c-390ba290df69
+153,Itraconazole,Itraconazole,16cb5c10-945c-4b15-b721-970294456f11
+154,Nystatin,Nystatin,e99f5c3a-5f3f-45cd-adf8-ac535483de08
+155,Terbinafine,Terbinafine,6919eabf-15a6-4cf1-9dd7-e1ecc1dc81ac
+156,Voriconazole,Voriconazole,4668c0c6-0583-4646-b10a-2b846202d826
+157,"Artemether, Lumefantrine","Artemether, Lumefantrine",6df99c43-469e-4a83-97ef-28402a0ac39d
+158,Hydroxychloroquine,Hydroxychloroquine,14b8dbdb-e1a4-4b84-a6f8-c95a5b1bfe75
+159,Mefloquine,Mefloquine,f168fac7-78b2-479f-ad67-5b7abf013d99
+160,Primaquine,Primaquine,f6582485-e1b4-4e6e-890e-5a823cc2697c
+161,Delamanid,Delamanid,c227ffb5-0b0d-4297-bef0-8a76d3a47faa
+162,Ethambutol,Ethambutol,95e14885-a52f-418b-a95a-ae6c65375f83
+163,"Ethambutol, Isoniazid, Pyrazinamide, Rifampicin","Ethambutol, Isoniazid, Pyrazinamide, Rifampicin",1b74d295-2082-400f-9af3-6bc224efad92
+164,Bedaquiline,Bedaquiline,c757a174-00ef-491e-aa4f-d69d162f12e5
+165,"Isoniazid, Pyrazinamide, Rifampicin","Isoniazid, Pyrazinamide, Rifampicin",935759aa-1360-4e5a-bd3e-237b024011bb
+166,"Isoniazid, Rifampicin","Isoniazid, Rifampicin",2bdfc444-2494-4823-a311-f55b271935d0
+167,Darunavir,Darunavir,2409c415-d7eb-4073-abca-e5489d38a0b9
+168,Dolutegravir,Dolutegravir,81d12872-d985-4c84-b68f-dd5de076cf35
+169,Entecavir,Entecavir,5b510435-c44e-4e4d-b064-691a0c033667
+170,Emtricitabine,Emtricitabine,a4086065-ceb6-4d0e-9ba0-799531a0ac84
+171,"Glecaprevir, Pibrentasvir","Glecaprevir, Pibrentasvir",2b7d97e9-2bdd-429e-83ba-800847fb37f9
+172,Lamivudine,Lamivudine,f83def30-9cc3-4243-852d-60d2a1bd0f32
+173,"Lopinavir, Ritonavir","Lopinavir, Ritonavir",ed9272dc-874b-4693-aa14-9349a7e54bb2
+174,Nevirapine,Nevirapine,7921c9e8-abc3-4f71-b4e6-9d954aba6ed6
+175,Oseltamivir,Oseltamivir,65a925d7-ebb2-4212-869b-ef78d0c7ca0c
+176,Ribavirin,Ribavirin,011d7762-148b-48d1-a189-0b7df4474f62
+177,Ritonavir,Ritonavir,4e4e73c8-b2e3-4508-a70e-5ef9b2e0ed27
+178,Raltegravir,Raltegravir,b6082684-1378-4cce-8993-b32977b3a37d
+179,Tenofovir Alafenamide,Tenofovir Alafenamide,ec23c325-9176-482d-ae13-ad290bca4703
+180,Valaciclovir,Valaciclovir,a25fadae-51c7-4511-ac52-eac791adaa3e
+181,Valganciclovir,Valganciclovir,afdb2eb7-a11f-423c-9d91-f35766c90692
+182,Sofosbuvir,Sofosbuvir,5181afe9-5458-4f51-aa52-5e2a679fbaae
+183,Sofosbuvir + Velpatasvir+ Voxilaprevir,Sofosbuvir + Velpatasvir+ Voxilaprevir,b93a4be3-0c48-44f0-bead-61454fd2790d
+184,Sofosbuvir + Velpatasvir,Sofosbuvir + Velpatasvir,f73243c7-b001-49d1-a69a-2c42f5a7cdb1
+185,Zidovudine,Zidovudine,18c8c38f-e112-4009-9393-ad8f6c18ad79
+186,Carvedilol,Carvedilol,489501ba-3fae-4676-807a-536fcc165e24
+187,Isosorbide Dinitrate/ or isosorbide mononitrate,Isosorbide Dinitrate/ or isosorbide mononitrate,5f94c076-44b0-4119-9cf7-dca350c4443e
+188,Amiodarone,Amiodarone,9cc3f9d5-a2c8-4e02-a76f-3845657c9a66
+189,Digoxin,Digoxin,830280c1-f42b-4a9e-bc2c-69f29ff1ab6d
+190,Atenolol,Atenolol,cbf92668-ea9b-4f61-9bca-d2611ad091ae
+190,Atenolol,Atenolol,e937198f-0b29-4794-88fa-13f68b5ffcae
+191,Bisoprolol,Bisoprolol,5a3b4139-b9a9-4061-ba5c-d125eff9257c
+192,Captopril,Captopril,503cd36d-05a8-4355-954f-bff270ad741f
+193,Enalapril,Enalapril,9ac7e206-4d71-4f49-83ba-2dd78176d15c
+194,Hydralazine,Hydralazine,df51adc5-6099-4ae6-989b-05bdee464721
+195,Hydrochlorothiazide,Hydrochlorothiazide,536fd228-c425-47c1-97f0-bc0180bbaaef
+196,"Lisinopril, Hydrochlorothiazide","Lisinopril, Hydrochlorothiazide",f8ef2dbf-3098-4d7e-8976-6faa2ecf01ce
+197,Methyldopa,Methyldopa,1ced358b-79fc-4c0a-b393-d72f00c9a5f6
+198,"Telmisartan, Amlodipine","Telmisartan, Amlodipine",66718e7c-cd87-480f-ae68-a050eb3c144c
+199,"Telmisartan, Hydrochlorothiazide","Telmisartan, Hydrochlorothiazide",ab46011f-6851-4ec4-9089-71d302e6e846
+200,Verapamil,Verapamil,ab52bcaa-85e1-4242-800a-903c405d03b2
+201,Clopidogrel,Clopidogrel,f9a8fe30-20a3-44b0-8e9f-d6b3759833c3
+202,Ticagrelor,Ticagrelor,b7abef10-113a-4778-8b76-0b6a14655d9e
+203,Atorvastatin,Atorvastatin,0ccf127b-d0c3-4a72-8bef-4501f565d027
+204,Fluvastatin,Fluvastatin,85dff7e7-84bb-449d-aca4-406401b18d71
+205,Simvastatin,Simvastatin,efce7289-dde5-42f7-9ae4-1cc21b17cd1e
+206,Furosemide,Furosemide,c5e81c62-fa7c-407b-bce0-7228173fe4c0
+207,Spironolactone,Spironolactone,6bcd79a7-d9b5-48b2-bb15-a4a6a2e10805
+208,Ketoconazole,Ketoconazole,8b68a2a9-b5c0-40f7-ab49-ccb43c537840
+209,Miconazole,Miconazole,ad4deb44-0218-4d00-be15-625adb5a0009
+210,Benzoyl Peroxide,Benzoyl Peroxide,8a5d31c1-ff59-4df9-953c-289971328eaf
+211,Benzyl Benzoate,Benzyl Benzoate,38e71736-a55d-442d-bdf5-02b392a6e5f8
+212,Clindamycin,Clindamycin,bcac5b28-47e5-4894-8eca-6d81701e7dbf
+212,Clindamycin,Clindamycin,03be0cda-ba00-4790-8009-4a5328b5958d
+213,Permethrin,Permethrin,9e0580ee-57bc-47ce-ba5d-a680882c33aa
+214,Podophyllotoxin,Podophyllotoxin,1373f7d3-040e-45cf-9eab-71674d904a27
+215,Salicylic Acid,Salicylic Acid,772d4541-783f-4ec0-a6f2-b61fd1cb1a0a
+216,Silver Sulfadiazine,Silver Sulfadiazine,72566879-aa2e-4cb4-b9c2-1a6b4211d7f7
+217,Betamethasone,Betamethasone,1e49c6ee-7d76-401c-bd29-4483d20d4a3e
+218,Mometasone,Mometasone,f4a45b8f-61cc-46e1-b183-15f1b2af35ab
+219,Retinol,Retinol,360414cc-46de-4bf2-af2f-8ebf29f08c49
+220,Fluorescein,Fluorescein,cd4e9d0a-d99d-4d94-a4f6-be64deb07a6b
+221,Acetazolamide,Acetazolamide,e93b1b80-44ec-471a-bfc8-30f141618644
+222,Bumetanide,Bumetanide,3d69282b-ad2d-4934-9eef-d58009b38b3d
+223,Indapamide,Indapamide,1b9e25e0-84d0-45f2-98c8-f9150a26cd0b
+224,Budesonide,Budesonide,48935fe5-72a9-49dc-b7b4-89b49a6be529
+224,Budesonide,Budesonide,b4ec8edd-408e-4184-9bb5-0ef8c500b31e
+225,Fluticasone,Fluticasone,0fee73ab-2aa7-46fd-a3f0-3c9d57d32bf4
+226,Mupirocin,Mupirocin,6fbf8380-62e2-4306-b162-9f4c02953af9
+227,Xylometazoline,Xylometazoline,16a9381b-f4d5-4b09-9882-8fe034fe2e20
+228,Loperamide,Loperamide,59d4cd5e-95e8-4de4-a049-f176789f7036
+229,Aprepitant,Aprepitant,bc60cbe0-a71d-4efb-ae5b-dc20f62a0816
+230,Metoclopramide,Metoclopramide,19cda81c-9733-4e57-9cfa-b9d4a51f9283
+231,Ondansetron,Ondansetron,b6dd91f1-75f7-460a-af1e-ae4d0013fb15
+232,Mesalazine,Mesalazine,353d282d-3e48-4ed4-9bfb-ba159059d00d
+233,Sulfasalazine,Sulfasalazine,bcfcec79-e1dd-438a-84f3-88a6ca094348
+234,Misoprostol,Misoprostol,950295e0-76c0-48cd-a539-9b4eb72baed6
+235,Bisacodyl,Bisacodyl,b883b227-32d0-4efd-bd46-90db9e321748
+236,Docusate Sodium,Docusate Sodium,461dc09c-d5cf-4ba0-88a7-447bac150f52
+237,Lactulose,Lactulose,8f3d2677-84e9-49e7-b8a9-3ee62100be0b
+238,Abemaciclib,Abemaciclib,2ac4502a-1f97-47e9-bd4d-850c3f2cad95
+239,Abiraterone,Abiraterone,ba43335d-71a6-4d70-b63c-ef380e09cce9
+240,Allopurinol,Allopurinol,60cc3596-2c8a-4878-a124-2cca82a9da73
+241,Anastrozole,Anastrozole,823eb279-d966-4acb-b999-ad26f18cd527
+242,Bicalutamide,Bicalutamide,fbcf2cd9-916f-4147-8a75-0dc24d7eff46
+243,Capecitabine,Capecitabine,3de1f0e3-d972-4888-b5f1-604865aa9924
+244,Cladribine,Cladribine,5fe53ae1-dd5e-4f73-adfd-e5ffad2ff212
+245,Cyclophosphamide,Cyclophosphamide,c2fbd04a-6736-42ab-841c-86e41b47790e
+246,Dabrafenib,Dabrafenib,9560f854-ee57-41cf-ad75-59714f6d13df
+247,Dasatinib,Dasatinib,8e643726-57ca-4218-8588-f65026620617
+248,Dexamethasone,Dexamethasone,4c3200d5-76ca-4a30-a8a6-cca55d9837a9
+249,Enzalutamide,Enzalutamide,13caf3d9-a5ac-428c-a736-c4c104a31a6b
+250,Everolimus,Everolimus,8c8a2ac4-7ae7-4c3d-9e30-e28629038257
+251,Flutamide,Flutamide,c83c62cf-ccc9-41f6-b6c3-45ad7ce2b888
+252,Lenalidomide,Lenalidomide,75febebb-49e8-40d1-bc4e-762735595c1b
+253,Melphalan,Melphalan,50253c57-cbfa-4d3f-bb8f-2d6cb2206728
+254,Mercaptopurine,Mercaptopurine,e4ebc996-38c6-4959-8e60-36d0f8321c7f
+255,Methotrexate,Methotrexate,acdccea2-489b-45cf-80f8-8b71393c8dd1
+256,Natamycin,Natamycin,3f82f2ce-5425-4b4f-ae8a-c05c17e63035
+257,Nilotinib,Nilotinib,4708a971-8597-4c8a-afaa-d8aed8b312c9
+258,Palbociclib,Palbociclib,56654dfc-0e08-4d09-b445-a78c7fe62e37
+259,Penicillamine,Penicillamine,419640a9-7e03-428a-96bb-b1fcccce00ce
+260,Tamoxifen,Tamoxifen,29d6a806-f6c7-475e-bdda-6693abac3a30
+261,Trametinib,Trametinib,df9aa917-86c0-4784-b021-ae85ebf081e3
+262,HydroxyUrea,HydroxyUrea,83dcbd16-ce84-44be-83c6-6d8df60c3e39
+263,Azathioprine,Azathioprine,7e0c7e42-968b-40b3-b0cb-34955d7eafbd
+264,Ciclosporin,Ciclosporin,676601c2-1a76-42c1-920f-04512db3a6fb
+265,Fingolimod,Fingolimod,fa07c7d4-4c5e-4361-a3c5-dbc29d87c65d
+266,Golimumab,Golimumab,54351676-d040-4e6c-af37-d0099b965a07
+267,Mycophenolate,Mycophenolate,b6c8aab0-a10f-4b47-b6f7-cc7b38e0e83a
+268,Tacrolimus,Tacrolimus,edbaece3-6ac1-4d66-b51d-74af63709c76
+269,Budesonide,Budesonide,48935fe5-72a9-49dc-b7b4-89b49a6be529
+269,Budesonide,Budesonide,b4ec8edd-408e-4184-9bb5-0ef8c500b31e
+270,"Fluticasone Furoate, Vilanterol","Fluticasone Furoate, Vilanterol",db09f02b-2a8f-4895-bd1c-d705e296ca4d
+271,Salbutamol,Salbutamol,93d1092d-4417-4401-99a7-50bfcefeff8f
+272,Ferrous Salt,Ferrous Salt,fbd28ba5-b349-4645-8542-5061353ebaf6
+273,Folic Acid,Folic Acid,88c7a7ca-b8c2-4aaf-9182-d53e7b50360b
+273,Folic Acid,Folic Acid,b6d6a5c3-e1cf-4928-a369-f7f9699ffb52
+274,Apixaban,Apixaban,45526bac-b4b1-4a3b-9b7d-a881e94faa20
+275,Desmopressin,Desmopressin,bb4b3384-8e3b-4b46-9977-fcbbd825b994
+276,Edoxaban,Edoxaban,c362a9f0-6b15-49e8-8b41-5a4aa1878433
+277,Rivaroxaban,Rivaroxaban,61bb4327-6d48-4fc5-b6a6-9839a835ba27
+278,Tranexamic Acid,Tranexamic Acid,3d4743b2-d043-44af-b620-f4ee0af3ea16
+279,Warfarin,Warfarin,f90a1ba7-79a1-4eb3-bbfb-8ffa86dd72df
+279,Warfarin,Warfarin,a0a5f2ef-4776-4f37-814a-0f782ed75db6
+280,"Levodopa, Benserazide","Levodopa, Benserazide",da4f9f10-557b-4338-820c-3ca71c45cc89
+281,"Levodopa, Carbidopa","Levodopa, Carbidopa",43e425df-ef83-48bd-8a49-632abfdd7eef
+282,Pramipexole,Pramipexole,9cbfb944-b4a9-4761-a0f8-e58103656392
+283,Ropinirole,Ropinirole,c35aba97-5b04-47c1-9f7b-9a73fbd0c6f5
+284,Trihexyphenidyl,Trihexyphenidyl,2d449168-1447-4bcc-873e-d42d9e9ef688
+285,Carbamazepine,Carbamazepine,bf1ed7fa-a0b6-4864-ad88-4c13601516ff
+286,Clonazepam,Clonazepam,53c73a07-c4a6-4432-8a26-6022b5670cbf
+287,Diazepam,Diazepam,790455d9-7895-434b-acd3-82219b6f93fb
+288,Ethosuximide,Ethosuximide,c101c3b0-34c9-40de-a6ee-dae1c9e2aa49
+289,Lamotrigine,Lamotrigine,89294dc3-d0be-4146-90b2-328c614a80cc
+290,Levetiracetam,Levetiracetam,ec6dfdb8-05f9-432e-b266-002180511b28
+291,Lorazepam,Lorazepam,0a58b3fb-d886-496f-aac3-5a3db3e1a6fd
+292,Phenytoin,Phenytoin,72d8b9f9-4d6a-4390-9c93-f57ee7043f28
+293,Colchicine,Colchicine,0cfa3dab-48a4-4a01-bb09-552bdcb522b5
+294,Alfacalcidol,Alfacalcidol,801e6ed2-18b5-47e2-be29-2259b476c370
+295,Calcitriol,Calcitriol,b2f0b67d-4535-4daf-a826-e55c5c6025f5
+296,Hydrocortisone,Hydrocortisone,107e6bc4-a1cd-4a21-8cfb-1a61267817e9
+296,Hydrocortisone,Hydrocortisone,03ec0cdc-a39c-4529-9f5f-0e22aee39087
+297,Estradiol,Estradiol,e2496245-c517-4d12-a4c6-2c952cb486d6
+298,Letrozole,Letrozole,f1f2d1a0-e644-44f5-8695-c095545808d4
+299,Dapagliflozin,Dapagliflozin,fbe9f0a9-3bbe-463b-9271-22ecdd4e9dbe
+300,Diazoxide,Diazoxide,08b16807-5650-452b-a70b-c7efec63447f
+301,Dulaglutide,Dulaglutide,0e6b5111-c249-4820-8194-d029bb480ed8
+302,Empagliflozin,Empagliflozin,6d67fa87-91ce-4c75-b6a0-0b4f68a85045
+303,Glibenclamide,Glibenclamide,93b2fc3f-8c53-4196-97f5-6b560361e977
+304,Gliclazide,Gliclazide,01e3a7c3-bab4-4bc3-aa62-4d59e5ff152d
+305,Glucose Monohydrate,Glucose Monohydrate,5cf25a71-7010-429e-92fa-180fdc994b9c
+306,Insulin Degludec,Insulin Degludec,b1c05188-4838-4e18-92f0-25801c50c8a7
+307,Insulin Glargine,Insulin Glargine,6f91fd1c-c064-407c-846f-40cf56860e5a
+308,Insulin Aspart,Insulin Aspart,9d6a7d38-dc2a-44d9-94a7-8f52156fd51a
+309,Insulin Lispro,Insulin Lispro,ea54c995-9899-40f5-bfb0-d0d062d5eef5
+310,Liraglutide,Liraglutide,47f824c7-9033-42d6-baab-e1684bf92c52
+311,Metformin,Metformin,18d90cf3-71ce-4806-8b26-d0be0a01ab52
+312,Semaglutide,Semaglutide,fd206799-0298-491e-a470-7db6bfc5d672
+313,Tirzepatide,Tirzepatide,b7cd545a-6501-4609-8f0d-6383f08499a9
+314,Cabergoline,Cabergoline,f5dc3521-aca6-459e-b9ee-a427129608d7
+315,Somatropin,Somatropin,c0d94429-1eaf-4dfd-95e0-6b687d91fe1e
+316,Carbimazole,Carbimazole,d06d1c50-6c63-47a7-a64d-8c04482c695b
+317,Levothyroxine,Levothyroxine,76623576-9322-4067-8642-894ca24d74cf
+318,Liothyronine,Liothyronine,da7866aa-3bec-4087-b530-9d58363ca9a3
+319,Propylthiouracil,Propylthiouracil,1f230d3e-6053-4bcf-9e3c-ea3b4485be67
+320,Amitriptyline,Amitriptyline,67e56d9b-091a-452f-ab21-85f1c6bc5a74
+321,Escitalopram,Escitalopram,ee4d5e50-9c94-4840-9356-f5aca6465084
+322,Bupropion,Bupropion,1068e718-e44a-4a53-8e9c-9d7613495a73
+323,Fluoxetine,Fluoxetine,088e765e-aa20-40e0-8503-969b5e8209d3
+324,Quetiapine,Quetiapine,c79334a0-3964-4380-9595-b62eab03d560
+325,Aripiprazole,Aripiprazole,64312a51-c2d3-46c9-9c0d-ef3b7e63ca97
+326,Chlorpromazine,Chlorpromazine,23bfbe9f-eeae-4093-bb6b-a5860c81ee50
+327,Clozapine,Clozapine,63f38f15-9231-4def-9c3d-91d90b798726
+328,Haloperidol,Haloperidol,751f6f8f-bfbb-40af-8e3f-80594c579258
+329,Olanzapine,Olanzapine,16989461-9447-473e-a5c1-ce9c729cb414
+330,Paliperidone,Paliperidone,7f370fa2-2f4c-4db1-888d-d26f04ffb0fd
+331,Risperidone,Risperidone,54688371-7052-47d4-ad8e-0557620f92e8
+332,Acetylsalicylic Acid,Acetylsalicylic Acid,b62757f7-149b-4b50-8c6d-258b350616eb
+333,Ibuprofen,Ibuprofen,2cffd9df-83ce-48c6-aa8e-3df476ae7e7e
+334,Diclofenac,Diclofenac,e0236034-dbe0-4965-ad66-c0e221bd0b27
+335,Paracetamol,Paracetamol,a391d9d7-67ff-41e2-8c3d-d0c2ece61fd7
+336,Tramadol,Tramadol,99de17b8-b796-44a5-9a91-1ca2776e02d2
+336,Tramadol,Tramadol,218c3e37-5151-40b4-9b9e-5e6cf03f01ff
+337,Fentanyl,Fentanyl,197181a2-ab31-482c-b33b-cb1861f3f0f3
+338,Morphine,Morphine,2a5d81d7-7bd6-400f-9631-89e775a081fe
+339,Levonorgestrel,Levonorgestrel,a5343cbb-2731-40d6-b887-30494cefca5f
+340,Norethisterone,Norethisterone,1c72f099-3bdb-44a8-ae6e-342bd0b9f120
+341,Hyoscine Butylbromide,Hyoscine Butylbromide,e5d33d42-1ec7-4998-9b6d-cdf503b5bb87
+342,Ciprofloxacin,Ciprofloxacin,ce2d62a4-1190-4e99-bef9-35835892edaa
+342,Ciprofloxacin,Ciprofloxacin,e8e6c0b7-0cf8-415d-8a01-9d85021203e9
+343,Chloramphenicol,Chloramphenicol,af99025f-4293-4e41-8760-7394a208a802
+344,Gatifloxacin,Gatifloxacin,8cfa62fc-7a5a-4e5d-a88c-fd891614c162
+345,Gentamicin,Gentamicin,fc806a2c-ee3f-43f7-8c40-e4c2e9892143
+346,Ofloxacin,Ofloxacin,f7940483-7acc-4385-8875-b624bd2b8eca
+347,Moxifloxacin,Moxifloxacin,90ecd71f-155b-4b3b-ae53-869e6c103da8
+348,Tobramycin,Tobramycin,6e6bf177-e9e9-4d29-b053-a234726bf557
+349,Sodium Hyaluronate,Sodium Hyaluronate,1ba4620c-3e66-4e9b-b682-7458be2f719b
+350,Latanoprost,Latanoprost,17b59c57-d856-4e7e-b922-123997320434
+351,Pilocarpine,Pilocarpine,d90958bb-610e-435b-8b14-847c6377df45
+352,Timolol,Timolol,a821b7cb-58ed-489f-91c7-0a951cb137f1
+353,Atropine,Atropine,ad22dc3b-8fff-4918-aaed-57023904a5b4
+354,Tropicamide,Tropicamide,9fa89604-9a34-48a7-84af-62cc1ac932f3
+355,Potassium Chloride,Potassium Chloride,fa555afd-e27c-4a45-9737-2e3326801b58
+356,Calcium,Calcium,57c9f023-c375-49c8-b7b8-38f2eeb1423d
+357,Cyanocobalamin,Cyanocobalamin,755a1b4d-90cb-4253-9d50-2b44f2840233
+358,Phytomenadione,Phytomenadione,c60e5daa-c8cd-4381-a4ca-a4a788263ecd
+359,Pyridoxine,Pyridoxine,aac3917e-80e2-4227-97cf-39470a3922db
+360,Thiamine,Thiamine,d6625a17-81f5-4425-a79c-7ed804d79ce7
+361,Nicotine,Nicotine,8b63abb5-8837-485e-9ba2-896618e5a4b7
+362,Varenicline Tartrate,Varenicline Tartrate,498673eb-d89b-411b-90b0-4e4257e1cfb7

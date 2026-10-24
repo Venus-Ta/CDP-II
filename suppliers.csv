@@ -1,0 +1,9 @@
+supplier_id,supplier_name,country,rating,avg_lead_time_days,min_order_quantity,payment_terms,delivery_reliability_score
+1,MedEx Pharma Distribution,UAE,4.5,5,200,Net-30,0.94
+2,Gulf Healthcare Supply,UAE,4.2,7,500,Net-45,0.91
+3,AlNahdi Medical Supplies,KSA,4.0,9,300,Net-30,0.88
+4,PharmaLink International,India,3.8,14,1000,Net-60,0.83
+5,EuroMed Distributors,Germany,4.7,12,200,Net-45,0.96
+6,GenericFirst Trading,Jordan,3.6,10,500,Net-30,0.81
+7,CuraMed Wholesalers,Egypt,3.5,11,400,Net-45,0.79
+8,PharmaGulf LLC,UAE,4.3,6,300,Net-30,0.92

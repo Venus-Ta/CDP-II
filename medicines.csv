@@ -1,0 +1,363 @@
+medicine_id,brand_name,generic_name,active_ingredient,strength,dosage_form,pack_size,atc_code,therapeutic_class,manufacturer,rx_otc,shelf_life_days
+1,Panadol,Paracetamol,Paracetamol,500mg,Tablet,24,N02BE01,Analgesic,GSK,OTC,730
+2,Panadol Extra,Paracetamol+Caffeine,Paracetamol,500mg/65mg,Tablet,24,N02BE01,Analgesic,GSK,OTC,730
+3,Panadol Syrup,Paracetamol,Paracetamol,120mg/5ml,Syrup,100,N02BE01,Analgesic,GSK,OTC,545
+4,Calpol,Paracetamol,Paracetamol,250mg/5ml,Syrup,100,N02BE01,Analgesic,Pfizer,OTC,545
+5,Febrilex,Paracetamol,Paracetamol,500mg,Tablet,16,N02BE01,Analgesic,Novartis,OTC,730
+6,Tempra,Paracetamol,Paracetamol,80mg,Drops,15,N02BE01,Analgesic,Mead Johnson,OTC,365
+7,Paramol,Paracetamol,Paracetamol,500mg,Capsule,20,N02BE01,Analgesic,Local Pharma,OTC,730
+8,Acepar,Paracetamol,Paracetamol,1000mg,Tablet,10,N02BE01,Analgesic,Ratiopharm,OTC,730
+9,Voltaren,Diclofenac,Diclofenac Sodium,50mg,Tablet,30,M01AB05,Anti-inflammatory,Novartis,RX,1095
+10,Voltaren Gel,Diclofenac,Diclofenac Sodium,10mg/g,Gel,100,M01AB05,Anti-inflammatory,Novartis,OTC,730
+11,Cataflam,Diclofenac,Diclofenac Potassium,25mg,Tablet,30,M01AB05,Anti-inflammatory,Novartis,RX,1095
+12,Diclac,Diclofenac,Diclofenac Sodium,75mg,Injection,3,M01AB05,Anti-inflammatory,Ratiopharm,RX,730
+13,Olfen,Diclofenac,Diclofenac Sodium,100mg,SR Tablet,20,M01AB05,Anti-inflammatory,Mepha,RX,1095
+14,Dicloflam,Diclofenac,Diclofenac Sodium,50mg,Suppository,10,M01AB05,Anti-inflammatory,Local Pharma,RX,545
+15,Brufen,Ibuprofen,Ibuprofen,400mg,Tablet,24,M01AE01,Anti-inflammatory,Abbott,OTC,1095
+16,Nurofen,Ibuprofen,Ibuprofen,200mg,Tablet,24,M01AE01,Anti-inflammatory,Reckitt,OTC,1095
+17,Nurofen Syrup,Ibuprofen,Ibuprofen,100mg/5ml,Syrup,150,M01AE01,Anti-inflammatory,Reckitt,OTC,545
+18,Advil,Ibuprofen,Ibuprofen,200mg,Capsule,20,M01AE01,Anti-inflammatory,Pfizer,OTC,1095
+19,Ibufen,Ibuprofen,Ibuprofen,600mg,Tablet,20,M01AE01,Anti-inflammatory,Ratiopharm,RX,1095
+20,Motrin,Ibuprofen,Ibuprofen,400mg,Tablet,30,M01AE01,Anti-inflammatory,J&J,OTC,1095
+21,Ipren,Ibuprofen,Ibuprofen,400mg,Tablet,20,M01AE01,Anti-inflammatory,Local Pharma,OTC,1095
+22,Aspirin,Acetylsalicylic Acid,Acetylsalicylic Acid,500mg,Tablet,20,N02BA01,Analgesic,Bayer,OTC,1825
+23,Aspirin Protect,Acetylsalicylic Acid,Acetylsalicylic Acid,100mg,EC Tablet,28,N02BA01,Cardiology,Bayer,RX,1825
+24,Cardiprin,Acetylsalicylic Acid,Acetylsalicylic Acid,100mg,EC Tablet,30,N02BA01,Cardiology,Local Pharma,RX,1825
+25,Disprin,Acetylsalicylic Acid,Acetylsalicylic Acid,300mg,Dispersible,24,N02BA01,Analgesic,Reckitt,OTC,1825
+26,Valium,Diazepam,Diazepam,5mg,Tablet,30,N05BA01,Anxiolytic,Roche,RX,1825
+27,Rivotril,Clonazepam,Clonazepam,0.5mg,Tablet,30,N05BA06,Anxiolytic,Roche,RX,1825
+28,Xanax,Alprazolam,Alprazolam,0.25mg,Tablet,30,N05BA12,Anxiolytic,Pfizer,RX,1825
+29,Lexotanil,Bromazepam,Bromazepam,3mg,Tablet,30,N05BA08,Anxiolytic,Roche,RX,1825
+30,Ativan,Lorazepam,Lorazepam,1mg,Tablet,30,N05BA06,Anxiolytic,Pfizer,RX,1825
+31,Ventolin,Salbutamol,Salbutamol,100mcg,Inhaler,200,R03AC02,Bronchodilator,GSK,RX,730
+32,Symbicort,Budesonide+Formoterol,Budesonide,160/4.5mcg,Inhaler,120,R03AK07,Respiratory,AstraZeneca,RX,730
+33,Seretide,Fluticasone+Salmeterol,Fluticasone,250/25mcg,Inhaler,120,R03AK06,Respiratory,GSK,RX,730
+34,Flixotide,Fluticasone,Fluticasone,125mcg,Inhaler,120,R03BA05,Respiratory,GSK,RX,730
+35,Spiriva,Tiotropium,Tiotropium,18mcg,Capsule,30,R03BB04,Respiratory,Boehringer,RX,730
+36,Singulair,Montelukast,Montelukast,10mg,Tablet,28,R03DC03,Respiratory,MSD,RX,1825
+37,Atrovent,Ipratropium,Ipratropium,20mcg,Inhaler,200,R03BB01,Respiratory,Boehringer,RX,730
+38,Mucosolvan,Ambroxol,Ambroxol,30mg,Tablet,20,R05CB06,Expectorant,Boehringer,OTC,1095
+39,Bisolvon,Bromhexine,Bromhexine,8mg,Tablet,25,R05CB02,Expectorant,Boehringer,OTC,1095
+40,Augmentin,Amoxicillin+Clavulanate,Amoxicillin,875/125mg,Tablet,14,J01CR02,Antibiotic,GSK,RX,730
+41,Amoxil,Amoxicillin,Amoxicillin,500mg,Capsule,21,J01CA04,Antibiotic,GSK,RX,730
+42,Zithromax,Azithromycin,Azithromycin,500mg,Tablet,3,J01FA10,Antibiotic,Pfizer,RX,1095
+43,Keflex,Cefalexin,Cefalexin,500mg,Capsule,28,J01DB01,Antibiotic,Flynn,RX,730
+44,Ciprobay,Ciprofloxacin,Ciprofloxacin,500mg,Tablet,10,J01MA02,Antibiotic,Bayer,RX,1095
+45,Flagyl,Metronidazole,Metronidazole,400mg,Tablet,21,J01XD01,Antibiotic,Pfizer,RX,730
+46,Doxycycline,Doxycycline,Doxycycline Hyclate,100mg,Capsule,8,J01AA02,Antibiotic,Various,RX,1095
+47,Klacid,Clarithromycin,Clarithromycin,500mg,Tablet,14,J01FA09,Antibiotic,Abbott,RX,1095
+48,Norvasc,Amlodipine,Amlodipine Besylate,5mg,Tablet,30,C08CA01,Antihypertensive,Pfizer,RX,1825
+49,Concor,Bisoprolol,Bisoprolol Fumarate,5mg,Tablet,30,C07AB07,Antihypertensive,Merck,RX,1825
+50,Lisinopril,Lisinopril,Lisinopril,10mg,Tablet,28,C09AA03,Antihypertensive,Ratiopharm,RX,1825
+51,Cozaar,Losartan,Losartan Potassium,50mg,Tablet,28,C09CA01,Antihypertensive,MSD,RX,1825
+52,Ramipril,Ramipril,Ramipril,5mg,Capsule,28,C09AA05,Antihypertensive,Ratiopharm,RX,1825
+53,Valsartan,Valsartan,Valsartan,80mg,Tablet,28,C09CA03,Antihypertensive,Novartis,RX,1825
+54,Amlodipine,Amlodipine,Amlodipine Besylate,10mg,Tablet,30,C08CA01,Antihypertensive,Generic,RX,1825
+55,Atenolol,Atenolol,Atenolol,50mg,Tablet,28,C07AB03,Antihypertensive,AstraZeneca,RX,1825
+56,Lipitor,Atorvastatin,Atorvastatin Calcium,20mg,Tablet,30,C10AA05,Lipid-lowering,Pfizer,RX,1825
+57,Crestor,Rosuvastatin,Rosuvastatin Calcium,10mg,Tablet,28,C10AA07,Lipid-lowering,AstraZeneca,RX,1825
+58,Zocor,Simvastatin,Simvastatin,20mg,Tablet,28,C10AA01,Lipid-lowering,MSD,RX,1825
+59,Pravastatin,Pravastatin,Pravastatin Sodium,40mg,Tablet,28,C10AA03,Lipid-lowering,Generic,RX,1825
+60,Glucophage,Metformin,Metformin HCl,500mg,Tablet,60,A10BA02,Antidiabetic,Merck,RX,1825
+61,Diamicron,Gliclazide,Gliclazide,80mg,Tablet,60,A10BB09,Antidiabetic,Servier,RX,1825
+62,Januvia,Sitagliptin,Sitagliptin,100mg,Tablet,28,A10BH01,Antidiabetic,MSD,RX,1825
+63,Lantus,Insulin Glargine,Insulin Glargine,100U/ml,Injection,10,A10AE04,Antidiabetic,Sanofi,RX,730
+64,NovoRapid,Insulin Aspart,Insulin Aspart,100U/ml,Injection,10,A10AB05,Antidiabetic,Novo Nordisk,RX,730
+65,Forxiga,Dapagliflozin,Dapagliflozin,10mg,Tablet,28,A10BK01,Antidiabetic,AstraZeneca,RX,1825
+66,Nexium,Esomeprazole,Esomeprazole,40mg,Capsule,28,A02BC05,GI,AstraZeneca,RX,1095
+67,Losec,Omeprazole,Omeprazole,20mg,Capsule,28,A02BC01,GI,AstraZeneca,RX,1095
+68,Pantoprazole,Pantoprazole,Pantoprazole,40mg,Tablet,28,A02BC02,GI,Ratiopharm,RX,1095
+69,Motilium,Domperidone,Domperidone,10mg,Tablet,30,A03FA03,GI,J&J,OTC,1095
+70,Imodium,Loperamide,Loperamide,2mg,Capsule,12,A07DA03,Antidiarrheal,J&J,OTC,1825
+71,Zantac,Ranitidine,Ranitidine,150mg,Tablet,60,A02BA02,GI,GSK,OTC,1095
+72,Buscopan,Hyoscine,Hyoscine Butylbromide,10mg,Tablet,20,A03BB01,GI,Boehringer,OTC,1825
+73,Duphalac,Lactulose,Lactulose,667mg/ml,Syrup,300,A06AD11,Laxative,Solvay,OTC,730
+74,Vitamin C,Ascorbic Acid,Ascorbic Acid,500mg,Tablet,30,A11GA01,Supplement,Various,OTC,1825
+75,Vitamin D3,Cholecalciferol,Cholecalciferol,1000IU,Capsule,30,A11CC05,Supplement,Various,OTC,1825
+76,Zinc Sulfate,Zinc,Zinc Sulfate,220mg,Tablet,30,A12CB01,Supplement,Various,OTC,1825
+77,Iron Supplement,Ferrous Sulfate,Ferrous Sulfate,325mg,Tablet,30,B03AA07,Supplement,Various,OTC,1825
+78,Folic Acid,Folic Acid,Folic Acid,5mg,Tablet,28,B03BB01,Supplement,Various,OTC,1825
+79,Omega-3,Fish Oil,Omega-3 Fatty Acids,1000mg,Capsule,30,A11BA00,Supplement,Various,OTC,1825
+80,Multivitamin,Multivitamin,Multivitamin,—,Tablet,30,A11AA03,Supplement,Various,OTC,1825
+81,Calcium+D3,Calcium Carbonate+D3,Calcium Carbonate,600mg/400IU,Tablet,60,A12AA04,Supplement,Various,OTC,1825
+82,Claritin,Loratadine,Loratadine,10mg,Tablet,30,R06AX13,Antihistamine,Bayer,OTC,1825
+83,Zyrtec,Cetirizine,Cetirizine HCl,10mg,Tablet,30,R06AE07,Antihistamine,UCB,OTC,1825
+84,Telfast,Fexofenadine,Fexofenadine,120mg,Tablet,30,R06AX26,Antihistamine,Sanofi,OTC,1825
+85,Phenergan,Promethazine,Promethazine,25mg,Tablet,56,R06AD02,Antihistamine,Sanofi,RX,1825
+86,Polaramine,Dexchlorpheniramine,Dexchlorpheniramine,2mg,Tablet,20,R06AB02,Antihistamine,MSD,OTC,1825
+87,Allegra,Fexofenadine,Fexofenadine,180mg,Tablet,30,R06AX26,Antihistamine,Sanofi,OTC,1825
+88,Betnovate,Betamethasone,Betamethasone Valerate,0.1%,Cream,30,D07AC01,Dermatology,GSK,RX,730
+89,Hydrocortisone,Hydrocortisone,Hydrocortisone,1%,Cream,30,D07AA02,Dermatology,Various,OTC,730
+90,Canesten,Clotrimazole,Clotrimazole,1%,Cream,20,D01AC01,Antifungal,Bayer,OTC,1095
+91,Lamisil,Terbinafine,Terbinafine,1%,Cream,15,D01AE15,Antifungal,Novartis,OTC,1095
+92,Fucidin,Fusidic Acid,Fusidic Acid,2%,Cream,15,D06AX01,Dermatology,LEO,RX,730
+93,Systane,Polyethylene Glycol,Polyethylene Glycol,0.4%,Eye Drops,10,S01XA20,Ophthalmology,Alcon,OTC,365
+94,Tobradex,Tobramycin+Dexamethasone,Tobramycin,0.3%/0.1%,Eye Drops,5,S01CA01,Ophthalmology,Alcon,RX,730
+95,Otrivin,Xylometazoline,Xylometazoline,0.1%,Nasal Spray,10,R01AA07,ENT,Novartis,OTC,730
+96,Flonase,Fluticasone,Fluticasone Propionate,50mcg,Nasal Spray,120,R01AD08,ENT,GSK,OTC,730
+97,Synthroid,Levothyroxine,Levothyroxine Sodium,100mcg,Tablet,30,H03AA01,Thyroid,Abbott,RX,1825
+98,Euthyrox,Levothyroxine,Levothyroxine Sodium,50mcg,Tablet,30,H03AA01,Thyroid,Merck,RX,1825
+99,Lyrica,Pregabalin,Pregabalin,75mg,Capsule,56,N03AX16,Neuropathic Pain,Pfizer,RX,1825
+100,Neurontin,Gabapentin,Gabapentin,300mg,Capsule,84,N03AX12,Neuropathic Pain,Pfizer,RX,1825
+101,Tramadol,Tramadol,Tramadol HCl,50mg,Capsule,20,N02AX02,Analgesic,Ratiopharm,RX,1825
+102,Zoloft,Sertraline,Sertraline HCl,50mg,Tablet,28,N06AB06,Antidepressant,Pfizer,RX,1825
+103,Prozac,Fluoxetine,Fluoxetine HCl,20mg,Capsule,28,N06AB03,Antidepressant,Lilly,RX,1825
+104,Lexapro,Escitalopram,Escitalopram,10mg,Tablet,28,N06AB10,Antidepressant,Lundbeck,RX,1825
+105,Xarelto,Rivaroxaban,Rivaroxaban,20mg,Tablet,28,B01AF01,Anticoagulant,Bayer,RX,1825
+106,Eliquis,Apixaban,Apixaban,5mg,Tablet,60,B01AF02,Anticoagulant,BMS/Pfizer,RX,1825
+107,Warfarin,Warfarin,Warfarin Sodium,5mg,Tablet,28,B01AA03,Anticoagulant,Various,RX,1825
+108,ORS Sachet,ORS,Sodium+Glucose,WHO formula,Powder,10,A07CA,Rehydration,Various,OTC,1095
+109,Povidone Iodine,Povidone Iodine,Povidone Iodine,10%,Solution,100,D08AG02,Antiseptic,Various,OTC,730
+110,Chlorhexidine,Chlorhexidine,Chlorhexidine Gluconate,0.05%,Mouthwash,300,A01AB03,Antiseptic,Various,OTC,730
+111,Propranolol,Propranolol,Propranolol,"10mg, 40mg",Tablet,30,C09,Cardiology,Pharma UAE,RX,730
+112,Sumatriptan,Sumatriptan,Sumatriptan,"50mg, 100mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+113,Phenobarbital,Phenobarbital,Phenobarbital,"30 mg/mL or 60 mg/mL , 200 mg/mL, 15 mg/5 mL 15mg, 30mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+114,Sevoflurane,Sevoflurane,Sevoflurane,250ml (100%),Inhaler,30,V03,General Outpatient,UAE Pharma,RX,730
+115,Midazolam,Midazolam,Midazolam,"5mg/mL (3mL), 10mg/2mL (0.5ml, 1ml, 1.5ml & 2ml), 7.5 mg",Tablet,30,N05,Anxiolytic,Novartis,RX,730
+116,Cetirizine,Cetirizine,Cetirizine,"5mg/5ml, 10mg",Tablet,30,R06AE07,Antihistamine,UCB,RX,1825
+117,Epinephrine (Adrenaline),Epinephrine (Adrenaline),Epinephrine (Adrenaline),"1mg/ml, 1.8mg/10ml, 0.15mg, 0.3 mg/0.3ml",Injection,30,V03,General Outpatient,UAE Pharma,RX,730
+118,Fexofenadine,Fexofenadine,Fexofenadine,"120mg, 180mg",Tablet,30,R06AX26,Antihistamine,Sanofi,RX,1825
+119,Loratadine,Loratadine,Loratadine,"1 mg/mL, 10mg",Tablet,30,R06AX13,Antihistamine,Bayer,RX,1825
+120,Prednisolone,Prednisolone,Prednisolone,"15mg/5ml, 5mg, 20mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+121,Prednisone,Prednisone,Prednisone,"5mg, 10mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+122,Promethazine,Promethazine,Promethazine,"5mg/5ml, 50mg",Syrup,56,R06AD02,Antihistamine,Sanofi,RX,1825
+123,Acetylcysteine,Acetylcysteine,Acetylcysteine,"200 mg/mL in 10 mL ampoule., 10% ; 20%",Syrup,30,V03,General Outpatient,UAE Pharma,RX,730
+124,Activated Charcoal,Activated Charcoal,Activated Charcoal,50g,Injection,30,V03,General Outpatient,UAE Pharma,RX,730
+125,Deferiprone,Deferiprone,Deferiprone,"500mg, 1000mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+126,Naltrexone,Naltrexone,Naltrexone,"50mg, 380mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+127,Ivermectin,Ivermectin,Ivermectin,"10 mg/g, 3mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+128,Praziquantel,Praziquantel,Praziquantel,400mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+129,Amoxicillin,Amoxicillin,Amoxicillin,"250 mg; 500 mg; 1 g (as sodium) in vial., 125 mg/5 mL; 250 mg/5 mL (as trihydrate). 250 mg; 500 mg; 1g (as trihydrate)",Tablet,21,J01CA04,Antibiotic,GSK,RX,730
+130,"Amoxicillin, Clavulanic Acid","Amoxicillin, Clavulanic Acid","Amoxicillin, Clavulanic Acid","600mg, 1200mg 156mg, 312mg 625mg, 1000mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+131,Azithromycin,Azithromycin,Azithromycin,"250 mg; 500 mg (anhydrous)., 200 mg/5 mL (anhydrous)",Tablet,3,J01FA10,Antibiotic,Pfizer,RX,1095
+132,Cefuroxime,Cefuroxime,Cefuroxime,"250mg, 500mg 125mg/5ml, 250mg/5ml, 750mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+133,Ciprofloxacin,Ciprofloxacin,Ciprofloxacin,"250mg, 500mg, 750mg, 200mg/100ml",Tablet,10,J01MA02,Antibiotic,Bayer,RX,1095
+134,Clarithromycin,Clarithromycin,Clarithromycin,"250mg, 500mg, 250mg/5ml",Tablet,14,J01FA09,Antibiotic,Abbott,RX,1095
+135,Clindamycin,Clindamycin,Clindamycin,"150mg, 300mg 150 mg/ml",Capsule,20,J01,Antibiotic,Pharma UAE,RX,730
+136,Clofazimine,Clofazimine,Clofazimine,"50mg, 100mg",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+137,Dapsone,Dapsone,Dapsone,100mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+138,Erythromycin,Erythromycin,Erythromycin,"250mg, 500mg, 500mg, 1000mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+139,Ethionamide,Ethionamide,Ethionamide,250mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+140,Isoniazid,Isoniazid,Isoniazid,100mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+141,Levofloxacin,Levofloxacin,Levofloxacin,"5mg/ml (100ml, 500ml), 250mg, 500mg, 750mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+142,Linezolid,Linezolid,Linezolid,"600mg, 600mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+143,Metronidazole,Metronidazole,Metronidazole,"250mg, 400mg, 500mg 125mg, 200mg/5ml 500mg",Tablet,21,J01XD01,Antibiotic,Pfizer,RX,730
+144,Nalidixic Acid,Nalidixic Acid,Nalidixic Acid,250 mg/5ml,Syrup,30,V03,General Outpatient,UAE Pharma,RX,730
+145,Nitrofurantoin,Nitrofurantoin,Nitrofurantoin,"50 mg , 100 mg, 25 mg/5 mL",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+146,Pyrazinamide,Pyrazinamide,Pyrazinamide,400 mg; 500 mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+147,Rifampicin,Rifampicin,Rifampicin,"20 mg/mL, 150, 300mg, 600mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+148,Tetracycline,Tetracycline,Tetracycline,Lymecycline : 300 mg,Capsule,20,J01,Antibiotic,Pharma UAE,RX,730
+149,Trimethoprim,Trimethoprim,Trimethoprim,"100mg, 200mg, 50mg/5ml",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+150,Clotrimazole,Clotrimazole,Clotrimazole,"1%;, 100 mg; 500 mg",Tablet,20,D01AC01,Antifungal,Bayer,RX,1095
+151,Fluconazole,Fluconazole,Fluconazole,"50 mg. 150mg, 2 mg/mL in vial (200mg) 50 mg/5 mL",Capsule,20,J01,Antibiotic,Pharma UAE,RX,730
+152,Flucytosine,Flucytosine,Flucytosine,500mg,Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+153,Itraconazole,Itraconazole,Itraconazole,"50mg, 100mg",Capsule,20,J01,Antibiotic,Pharma UAE,RX,730
+154,Nystatin,Nystatin,Nystatin,"100,000IU, 10,000,000 units",Cream,30,C09,Cardiology,Pharma UAE,RX,730
+155,Terbinafine,Terbinafine,Terbinafine,"250 mg, 1%",Tablet,15,D01AE15,Antifungal,Novartis,RX,1095
+156,Voriconazole,Voriconazole,Voriconazole,"50mg, 200mg, 200mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+157,"Artemether, Lumefantrine","Artemether, Lumefantrine","Artemether, Lumefantrine",20 mg + 120 mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+158,Hydroxychloroquine,Hydroxychloroquine,Hydroxychloroquine,200mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+159,Mefloquine,Mefloquine,Mefloquine,250mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+160,Primaquine,Primaquine,Primaquine,"7.5mg, 15mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+161,Delamanid,Delamanid,Delamanid,"25mg, 50mg",Tablet,30,N05,Anxiolytic,Novartis,RX,730
+162,Ethambutol,Ethambutol,Ethambutol,"100, 400 mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+163,"Ethambutol, Isoniazid, Pyrazinamide, Rifampicin","Ethambutol, Isoniazid, Pyrazinamide, Rifampicin","Ethambutol, Isoniazid, Pyrazinamide, Rifampicin",275 mg + 75 mg + 400 mg + 150 mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+164,Bedaquiline,Bedaquiline,Bedaquiline,100 mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+165,"Isoniazid, Pyrazinamide, Rifampicin","Isoniazid, Pyrazinamide, Rifampicin","Isoniazid, Pyrazinamide, Rifampicin",50 mg + 150 mg + 75 mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+166,"Isoniazid, Rifampicin","Isoniazid, Rifampicin","Isoniazid, Rifampicin",300 mg + 300 mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+167,Darunavir,Darunavir,Darunavir,"400mg, 600mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+168,Dolutegravir,Dolutegravir,Dolutegravir,"5mg, 50mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+169,Entecavir,Entecavir,Entecavir,"0.5mg , 1mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+170,Emtricitabine,Emtricitabine,Emtricitabine,200mg,Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+171,"Glecaprevir, Pibrentasvir","Glecaprevir, Pibrentasvir","Glecaprevir, Pibrentasvir",100mg/40mg,Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+172,Lamivudine,Lamivudine,Lamivudine,"100mg, 150mg",Tablet,30,N05,Anxiolytic,Novartis,RX,730
+173,"Lopinavir, Ritonavir","Lopinavir, Ritonavir","Lopinavir, Ritonavir",100 mg + 25 mg; 200 mg + 50 mg,Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+174,Nevirapine,Nevirapine,Nevirapine,200mg,Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+175,Oseltamivir,Oseltamivir,Oseltamivir,"6mg/ml, 75mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+176,Ribavirin,Ribavirin,Ribavirin,200 mg,Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+177,Ritonavir,Ritonavir,Ritonavir,100mg,Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+178,Raltegravir,Raltegravir,Raltegravir,"400mg, 600mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+179,Tenofovir Alafenamide,Tenofovir Alafenamide,Tenofovir Alafenamide,25mg,Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+180,Valaciclovir,Valaciclovir,Valaciclovir,500mg,Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+181,Valganciclovir,Valganciclovir,Valganciclovir,450mg,Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+182,Sofosbuvir,Sofosbuvir,Sofosbuvir,400mg,Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+183,Sofosbuvir + Velpatasvir+ Voxilaprevir,Sofosbuvir + Velpatasvir+ Voxilaprevir,Sofosbuvir + Velpatasvir+ Voxilaprevir,400 mg +100 mg + 100 mg,Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+184,Sofosbuvir + Velpatasvir,Sofosbuvir + Velpatasvir,Sofosbuvir + Velpatasvir,400 mg +100 mg,Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+185,Zidovudine,Zidovudine,Zidovudine,"10mg/ml, 100mg, 250mg, 300mg",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+186,Carvedilol,Carvedilol,Carvedilol,"6.25mg, 25mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+187,Isosorbide Dinitrate/ or isosorbide mononitrate,Isosorbide Dinitrate/ or isosorbide mononitrate,Isosorbide Dinitrate/ or isosorbide mononitrate,"10mg, 20mg & 40 mg / 20mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+188,Amiodarone,Amiodarone,Amiodarone,"200mg, 150mg/3ml",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+189,Digoxin,Digoxin,Digoxin,"0.0625mg, 0.125mg, 0.25mg, 0.5mg/2ml",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+190,Atenolol,Atenolol,Atenolol,"25mg, 50mg, 100mg",Tablet,28,C07AB03,Antihypertensive,AstraZeneca,RX,1825
+191,Bisoprolol,Bisoprolol,Bisoprolol,"2.5mg, 5mg, 10mg",Tablet,30,C07AB07,Antihypertensive,Merck,RX,1825
+192,Captopril,Captopril,Captopril,"25mg, 25mg/5ml, 5mg/5ml",Tablet,30,C09,Cardiology,Pharma UAE,RX,730
+193,Enalapril,Enalapril,Enalapril,"5mg, 10mg, 20mg",Tablet,30,C09,Cardiology,Pharma UAE,RX,730
+194,Hydralazine,Hydralazine,Hydralazine,"25mg, 50mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+195,Hydrochlorothiazide,Hydrochlorothiazide,Hydrochlorothiazide,25mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+196,"Lisinopril, Hydrochlorothiazide","Lisinopril, Hydrochlorothiazide","Lisinopril, Hydrochlorothiazide","5mg, 10mg, 20mg",Tablet,30,C09,Cardiology,Pharma UAE,RX,730
+197,Methyldopa,Methyldopa,Methyldopa,250mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+198,"Telmisartan, Amlodipine","Telmisartan, Amlodipine","Telmisartan, Amlodipine","(40 mg + 5 mg); (80 mg + 5 mg); (80 mg +, 10 mg)",Tablet,30,C09,Cardiology,Pharma UAE,RX,730
+199,"Telmisartan, Hydrochlorothiazide","Telmisartan, Hydrochlorothiazide","Telmisartan, Hydrochlorothiazide","40 mg + 12.5 mg;, 80 mg + 12.5 mg;, 80 mg + 25 mg",Tablet,30,C09,Cardiology,Pharma UAE,RX,730
+200,Verapamil,Verapamil,Verapamil,"240mg SR, 5 mg/2ml",Tablet,30,N05,Anxiolytic,Novartis,RX,730
+201,Clopidogrel,Clopidogrel,Clopidogrel,"75mg, 300mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+202,Ticagrelor,Ticagrelor,Ticagrelor,"60mg, 90mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+203,Atorvastatin,Atorvastatin,Atorvastatin,"10mg, 20mg, 40mg, 80mg",Tablet,30,C10AA05,Lipid-lowering,Pfizer,RX,1825
+204,Fluvastatin,Fluvastatin,Fluvastatin,80mg/Tablet,Tablet,30,C09,Cardiology,Pharma UAE,RX,730
+205,Simvastatin,Simvastatin,Simvastatin,"10,20,40mg",Tablet,28,C10AA01,Lipid-lowering,MSD,RX,1825
+206,Furosemide,Furosemide,Furosemide,"20mg, 40mg, 250mg 20mg/ml, 5mg/5ml",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+207,Spironolactone,Spironolactone,Spironolactone,"25mg, 100mg 25mg/5ml",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+208,Ketoconazole,Ketoconazole,Ketoconazole,0.02,Cream,20,J01,Antibiotic,Pharma UAE,RX,730
+209,Miconazole,Miconazole,Miconazole,2% (nitrate),Cream,20,J01,Antibiotic,Pharma UAE,RX,730
+210,Benzoyl Peroxide,Benzoyl Peroxide,Benzoyl Peroxide,"2.5%,5%, 10%",Cream,30,V03,General Outpatient,UAE Pharma,RX,730
+211,Benzyl Benzoate,Benzyl Benzoate,Benzyl Benzoate,0.25,Cream,30,V03,General Outpatient,UAE Pharma,RX,730
+212,Clindamycin,Clindamycin,Clindamycin,0.01,Cream,20,J01,Antibiotic,Pharma UAE,RX,730
+213,Permethrin,Permethrin,Permethrin,"1%, 5%",Cream,30,V03,General Outpatient,UAE Pharma,RX,730
+214,Podophyllotoxin,Podophyllotoxin,Podophyllotoxin,1.5mg/g,Cream,30,V03,General Outpatient,UAE Pharma,RX,730
+215,Salicylic Acid,Salicylic Acid,Salicylic Acid,0.1,Cream,30,V03,General Outpatient,UAE Pharma,RX,730
+216,Silver Sulfadiazine,Silver Sulfadiazine,Silver Sulfadiazine,combination,Cream,30,V03,General Outpatient,UAE Pharma,RX,730
+217,Betamethasone,Betamethasone,Betamethasone,0.001,Cream,30,D07AC01,Dermatology,GSK,RX,730
+218,Mometasone,Mometasone,Mometasone,0.001,Cream,30,V03,General Outpatient,UAE Pharma,RX,730
+219,Retinol,Retinol,Retinol,50 000 IU; 100 000 IU; 200 000 IU,Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+220,Fluorescein,Fluorescein,Fluorescein,"2%, 10%",Eye Drops,30,V03,General Outpatient,UAE Pharma,RX,730
+221,Acetazolamide,Acetazolamide,Acetazolamide,250mg,Tablet,30,N05,Anxiolytic,Novartis,RX,730
+222,Bumetanide,Bumetanide,Bumetanide,"1mg, 2mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+223,Indapamide,Indapamide,Indapamide,1.5mg/g,Tablet,30,N05,Anxiolytic,Novartis,RX,730
+224,Budesonide,Budesonide,Budesonide,64 mcg,Nasal Spray,1,R03,Respiratory,AstraZeneca,RX,730
+225,Fluticasone,Fluticasone,Fluticasone,27.5 mcg,Nasal Spray,120,R03BA05,Respiratory,GSK,RX,730
+226,Mupirocin,Mupirocin,Mupirocin,0.02,Cream,30,V03,General Outpatient,UAE Pharma,RX,730
+227,Xylometazoline,Xylometazoline,Xylometazoline,"0.05%, 0.1%",Nasal Spray,10,R01AA07,ENT,Novartis,RX,730
+228,Loperamide,Loperamide,Loperamide,2 mg,Capsule,12,A07DA03,Antidiarrheal,J&J,RX,1825
+229,Aprepitant,Aprepitant,Aprepitant,80+120mg,Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+230,Metoclopramide,Metoclopramide,Metoclopramide,"5 mg/mL (hydrochloride) in 2 mL ampoule 5 mg/5 mL, 10 mg (hydrochloride)",Tablet,30,N05,Anxiolytic,Novartis,RX,730
+231,Ondansetron,Ondansetron,Ondansetron,"4mg, 8mg 4mg/5ml, 4mg, 8mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+232,Mesalazine,Mesalazine,Mesalazine,"400mg, 800mg 500mg, 1g, 1.6gmd, 2g 1g",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+233,Sulfasalazine,Sulfasalazine,Sulfasalazine,500mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+234,Misoprostol,Misoprostol,Misoprostol,200mcg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+235,Bisacodyl,Bisacodyl,Bisacodyl,"5mg, 5mg, 10mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+236,Docusate Sodium,Docusate Sodium,Docusate Sodium,"100 mg, 50 mg/5ml",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+237,Lactulose,Lactulose,Lactulose,650-670mg/mL,Syrup,300,A06AD11,Laxative,Solvay,RX,730
+238,Abemaciclib,Abemaciclib,Abemaciclib,"50mg, 100mg, 150mg, 200mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+239,Abiraterone,Abiraterone,Abiraterone,"250mg, 500mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+240,Allopurinol,Allopurinol,Allopurinol,"100mg, 300mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+241,Anastrozole,Anastrozole,Anastrozole,1mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+242,Bicalutamide,Bicalutamide,Bicalutamide,"50mg, 150mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+243,Capecitabine,Capecitabine,Capecitabine,"150mg, 500mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+244,Cladribine,Cladribine,Cladribine,"10mg/5ml, 10mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+245,Cyclophosphamide,Cyclophosphamide,Cyclophosphamide,"50mg, 500mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+246,Dabrafenib,Dabrafenib,Dabrafenib,"50mg, 75mg",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+247,Dasatinib,Dasatinib,Dasatinib,"20mg, 50mg, 70mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+248,Dexamethasone,Dexamethasone,Dexamethasone,"4mg/mL, 4mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+249,Enzalutamide,Enzalutamide,Enzalutamide,40mg,Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+250,Everolimus,Everolimus,Everolimus,"0.25, 0.5, 0.75, 5 & 10 me",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+251,Flutamide,Flutamide,Flutamide,250mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+252,Lenalidomide,Lenalidomide,Lenalidomide,25 mg,Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+253,Melphalan,Melphalan,Melphalan,"2 mg, 50mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+254,Mercaptopurine,Mercaptopurine,Mercaptopurine,50mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+255,Methotrexate,Methotrexate,Methotrexate,"5mg, 7.5mg, 10mg, 12.5mg, 15mg,20mg 120mg, 2.5ng, 10mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+256,Natamycin,Natamycin,Natamycin,0.05,Eye Drops,20,J01,Antibiotic,Pharma UAE,RX,730
+257,Nilotinib,Nilotinib,Nilotinib,"100, 200mg",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+258,Palbociclib,Palbociclib,Palbociclib,"75, 100, 125mg",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+259,Penicillamine,Penicillamine,Penicillamine,250mg,Tablet,30,N05,Anxiolytic,Novartis,RX,730
+260,Tamoxifen,Tamoxifen,Tamoxifen,"10mg, 20mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+261,Trametinib,Trametinib,Trametinib,"0.5mg, 2mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+262,HydroxyUrea,HydroxyUrea,HydroxyUrea,500mg,Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+263,Azathioprine,Azathioprine,Azathioprine,50mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+264,Ciclosporin,Ciclosporin,Ciclosporin,"25 mg., 50 mg/m, 100 mg/mL",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+265,Fingolimod,Fingolimod,Fingolimod,0.5mg,Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+266,Golimumab,Golimumab,Golimumab,50 mg /0.5ml,Injection,30,V03,General Outpatient,UAE Pharma,RX,730
+267,Mycophenolate,Mycophenolate,Mycophenolate,"180mg, 360mg, 500mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+268,Tacrolimus,Tacrolimus,Tacrolimus,"0.5mg, 1mg, 2mg, 3mg, 5mg 0.1%, 0.03%, 5 mg/mL, 0.2 mg",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+269,Budesonide,Budesonide,Budesonide,"0.25mg/ml, 0.5mg/ml 160mcg/(Formeterol)4.5mcg , 80mcg/(Formeterol)4.5mcg 100mcg, 200mcg, 3mg, 9mg, 32mcg",Capsule,1,R03,Respiratory,AstraZeneca,RX,730
+270,"Fluticasone Furoate, Vilanterol","Fluticasone Furoate, Vilanterol","Fluticasone Furoate, Vilanterol","92mcg/40mcg, 184mcg/40mcg",Inhaler,1,R03,Respiratory,AstraZeneca,RX,730
+271,Salbutamol,Salbutamol,Salbutamol,"100 micrograms (as sulfate) per dose. 50 micrograms/mL (as sulfate) in 5 mL ampoule., 100 micrograms (as sulfate) per dose., 5 mg/mL (as sulfate)",Inhaler,200,R03AC02,Bronchodilator,GSK,RX,730
+272,Ferrous Salt,Ferrous Salt,Ferrous Salt,"equivalent to 25 mg iron (as sulfate)/mL, equivalent to 60 mg iron",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+273,Folic Acid,Folic Acid,Folic Acid,"0.4mcg, 1mg, 5mg",Tablet,28,B03BB01,Supplement,Various,RX,1825
+274,Apixaban,Apixaban,Apixaban,"2.5MG, 5MG",Tablet,60,B01AF02,Anticoagulant,BMS/Pfizer,RX,1825
+275,Desmopressin,Desmopressin,Desmopressin,"4 mcg/mL, 360 mcg/ml",Syrup,30,V03,General Outpatient,UAE Pharma,RX,730
+276,Edoxaban,Edoxaban,Edoxaban,"15mg, 30mg, 60mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+277,Rivaroxaban,Rivaroxaban,Rivaroxaban,"2.5mg, 10mg, 15mg, 20mmg",Tablet,28,B01AF01,Anticoagulant,Bayer,RX,1825
+278,Tranexamic Acid,Tranexamic Acid,Tranexamic Acid,"500mg, 500mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+279,Warfarin,Warfarin,Warfarin,"1mg, 2mg, 3mg, 5mg",Tablet,28,B01AA03,Anticoagulant,Various,RX,1825
+280,"Levodopa, Benserazide","Levodopa, Benserazide","Levodopa, Benserazide","100/25, 50/12.5 mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+281,"Levodopa, Carbidopa","Levodopa, Carbidopa","Levodopa, Carbidopa","Carbidopa : 50 mg, Levodopa : 200 mg, Carbidopa : 10 mg, Levodopa : 100 mg Carbidopa : 25 mg, Levodopa : 100 mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+282,Pramipexole,Pramipexole,Pramipexole,"0.088mg, 0.18mg, 0.26mg, 0.52mg, 0.7mg, and 1.05mg",Tablet,30,N05,Anxiolytic,Novartis,RX,730
+283,Ropinirole,Ropinirole,Ropinirole,"0.5mg, 1mg, 2mg, 4mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+284,Trihexyphenidyl,Trihexyphenidyl,Trihexyphenidyl,"2mg, 5mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+285,Carbamazepine,Carbamazepine,Carbamazepine,"200mg, 400mg, 2%",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+286,Clonazepam,Clonazepam,Clonazepam,"0.5mg, 2mg, 0.5mg/5ml",Tablet,30,N05BA06,Anxiolytic,Roche,RX,1825
+287,Diazepam,Diazepam,Diazepam,"10mg/2ml 5mg, 2mg/ml, 5mg/2.5ml",Tablet,30,N05BA01,Anxiolytic,Roche,RX,1825
+288,Ethosuximide,Ethosuximide,Ethosuximide,"250mg, 250mg/5ml",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+289,Lamotrigine,Lamotrigine,Lamotrigine,"25mg, 50mg, 100mg, 200mg",Tablet,30,N05,Anxiolytic,Novartis,RX,730
+290,Levetiracetam,Levetiracetam,Levetiracetam,"500mg/5ml 100 mg /mL, 250mg, 500mg, 750mg, 1000mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+291,Lorazepam,Lorazepam,Lorazepam,"1mg/ml, 4mg 1mg",Tablet,30,N05BA06,Anxiolytic,Pfizer,RX,1825
+292,Phenytoin,Phenytoin,Phenytoin,"100mg, 50mg/ml",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+293,Colchicine,Colchicine,Colchicine,"0.5mg, 0.6mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+294,Alfacalcidol,Alfacalcidol,Alfacalcidol,"2µg / ml 0.25mcg, 1mcg 2µg / ml",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+295,Calcitriol,Calcitriol,Calcitriol,1mcg/ml 0.25mcg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+296,Hydrocortisone,Hydrocortisone,Hydrocortisone,"100MG, 250MG, 1% acetate, 5 mg; 10 mg; 20 mg",Tablet,30,D07AA02,Dermatology,Various,RX,730
+297,Estradiol,Estradiol,Estradiol,"0.5mg, 1mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+298,Letrozole,Letrozole,Letrozole,2.5mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+299,Dapagliflozin,Dapagliflozin,Dapagliflozin,"5mg , 10mg",Tablet,28,A10BK01,Antidiabetic,AstraZeneca,RX,1825
+300,Diazoxide,Diazoxide,Diazoxide,"50mg/m, 15 mg/mll",Syrup,30,V03,General Outpatient,UAE Pharma,RX,730
+301,Dulaglutide,Dulaglutide,Dulaglutide,"0.75, 1.5 mg",Injection,5,A10,Antidiabetic,Novo Nordisk,RX,545
+302,Empagliflozin,Empagliflozin,Empagliflozin,"10mg, 25mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+303,Glibenclamide,Glibenclamide,Glibenclamide,5mg,Tablet,30,N05,Anxiolytic,Novartis,RX,730
+304,Gliclazide,Gliclazide,Gliclazide,"30mg, 60mg",Tablet,60,A10BB09,Antidiabetic,Servier,RX,1825
+305,Glucose Monohydrate,Glucose Monohydrate,Glucose Monohydrate,"85%, 18 g/ 50ml, 40%",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+306,Insulin Degludec,Insulin Degludec,Insulin Degludec,"100IU/ml, 200IU/ml",Tablet,5,A10,Antidiabetic,Novo Nordisk,RX,545
+307,Insulin Glargine,Insulin Glargine,Insulin Glargine,100 u /ml,Injection,10,A10AE04,Antidiabetic,Sanofi,RX,730
+308,Insulin Aspart,Insulin Aspart,Insulin Aspart,100 u /ml,Injection,10,A10AB05,Antidiabetic,Novo Nordisk,RX,730
+309,Insulin Lispro,Insulin Lispro,Insulin Lispro,100 u /ml,Injection,5,A10,Antidiabetic,Novo Nordisk,RX,545
+310,Liraglutide,Liraglutide,Liraglutide,6mg/1mL,Injection,5,A10,Antidiabetic,Novo Nordisk,RX,545
+311,Metformin,Metformin,Metformin,"500mg, 750mg, 850mg, 1000mg",Tablet,60,A10BA02,Antidiabetic,Merck,RX,1825
+312,Semaglutide,Semaglutide,Semaglutide,"0.25, 0.5, 1 mg",Injection,5,A10,Antidiabetic,Novo Nordisk,RX,545
+313,Tirzepatide,Tirzepatide,Tirzepatide,"2.5, 5, 7.5, 10, 12.5, 15 mg",Injection,30,V03,General Outpatient,UAE Pharma,RX,730
+314,Cabergoline,Cabergoline,Cabergoline,0.5 mg; 1 mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+315,Somatropin,Somatropin,Somatropin,"5.83 mg/ml, 8mg/ml, 5mg, 10mg,15mg /1.5ml",Injection,30,V03,General Outpatient,UAE Pharma,RX,730
+316,Carbimazole,Carbimazole,Carbimazole,"5mg, 20mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+317,Levothyroxine,Levothyroxine,Levothyroxine,"25mcg, 50mcg, 100mcg,112mcg 137mcg,, 150mcg, 175mcg 200mcg, 300mcg",Tablet,30,H03AA01,Thyroid,Abbott,RX,1825
+318,Liothyronine,Liothyronine,Liothyronine,"5mcg, 20mcg, 25mcg, 50mcg, 20 mcg/ml",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+319,Propylthiouracil,Propylthiouracil,Propylthiouracil,50mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+320,Amitriptyline,Amitriptyline,Amitriptyline,25mg,Tablet,30,N05,Anxiolytic,Novartis,RX,730
+321,Escitalopram,Escitalopram,Escitalopram,10mg,Tablet,28,N06AB10,Antidepressant,Lundbeck,RX,1825
+322,Bupropion,Bupropion,Bupropion,"150mg, 300mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+323,Fluoxetine,Fluoxetine,Fluoxetine,20 mg,Tablet,28,N06AB03,Antidepressant,Lilly,RX,1825
+324,Quetiapine,Quetiapine,Quetiapine,"25mg, 50mg, 100mg, 200mg, 300mg,, 400mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+325,Aripiprazole,Aripiprazole,Aripiprazole,"5, 10, 15mg, 1mg/ml 960 mg",Tablet,20,J01,Antibiotic,Pharma UAE,RX,730
+326,Chlorpromazine,Chlorpromazine,Chlorpromazine,"50mg, 100mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+327,Clozapine,Clozapine,Clozapine,"25mg, 100mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+328,Haloperidol,Haloperidol,Haloperidol,"2 mg; 5 mg., 5mg/ml",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+329,Olanzapine,Olanzapine,Olanzapine,"5mg, 7.5mg, 10mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+330,Paliperidone,Paliperidone,Paliperidone,"3mg, 6mg, 9mg, 25 mg; 50 mg; 75 mg; 100 mg; 150 mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+331,Risperidone,Risperidone,Risperidone,"1mg,2mg,3mg,4mg 1mg/ml, 25mg, 37.5mg, 50 mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+332,Acetylsalicylic Acid,Acetylsalicylic Acid,Acetylsalicylic Acid,"75mg, 81mg, 100mg, 300mg",Tablet,20,N02BA01,Analgesic,Bayer,RX,1825
+333,Ibuprofen,Ibuprofen,Ibuprofen,"200mg, 400mg, 600mg 100mg/5ml",Tablet,24,M01AE01,Anti-inflammatory,Abbott,RX,1095
+334,Diclofenac,Diclofenac,Diclofenac,"50mg 50mg, 75mg",Tablet,30,M01AB05,Anti-inflammatory,Novartis,RX,1095
+335,Paracetamol,Paracetamol,Paracetamol,"500mg 1000mg, 120mg/ml, 240mg/ml 100mg/ml, 120mg, 240mg",Tablet,24,N02BE01,Analgesic,GSK,RX,730
+336,Tramadol,Tramadol,Tramadol,"100mg/ 2ml 50mg, 100mg",Capsule,20,N02AX02,Analgesic,Ratiopharm,RX,1825
+337,Fentanyl,Fentanyl,Fentanyl,"12 micrograms/hr; 25 micrograms/hr; 50, micrograms/hr; 75 micrograms/hr; 100 micrograms/hr",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+338,Morphine,Morphine,Morphine,"10mg, 30mg, 10 mg/ml",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+339,Levonorgestrel,Levonorgestrel,Levonorgestrel,1.5mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+340,Norethisterone,Norethisterone,Norethisterone,10mg,Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+341,Hyoscine Butylbromide,Hyoscine Butylbromide,Hyoscine Butylbromide,"20 mg/ml., 10mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+342,Ciprofloxacin,Ciprofloxacin,Ciprofloxacin,3mg/ml,Eye Drops,10,J01MA02,Antibiotic,Bayer,RX,1095
+343,Chloramphenicol,Chloramphenicol,Chloramphenicol,10mg/1g,Cream,30,V03,General Outpatient,UAE Pharma,RX,730
+344,Gatifloxacin,Gatifloxacin,Gatifloxacin,0.5% [5 mg/mL],Eye Drops,20,J01,Antibiotic,Pharma UAE,RX,730
+345,Gentamicin,Gentamicin,Gentamicin,0.03,Eye Drops,30,V03,General Outpatient,UAE Pharma,RX,730
+346,Ofloxacin,Ofloxacin,Ofloxacin,0.3%,Eye Drops,20,J01,Antibiotic,Pharma UAE,RX,730
+347,Moxifloxacin,Moxifloxacin,Moxifloxacin,0.005,Eye Drops,20,J01,Antibiotic,Pharma UAE,RX,730
+348,Tobramycin,Tobramycin,Tobramycin,0.003,Eye Drops,20,J01,Antibiotic,Pharma UAE,RX,730
+349,Sodium Hyaluronate,Sodium Hyaluronate,Sodium Hyaluronate,multiple,Eye Drops,30,V03,General Outpatient,UAE Pharma,RX,730
+350,Latanoprost,Latanoprost,Latanoprost,50 μg/ml,Eye Drops,30,V03,General Outpatient,UAE Pharma,RX,730
+351,Pilocarpine,Pilocarpine,Pilocarpine,2%; 4%,Eye Drops,30,V03,General Outpatient,UAE Pharma,RX,730
+352,Timolol,Timolol,Timolol,0.25%; 0.5%,Eye Drops,30,C09,Cardiology,Pharma UAE,RX,730
+353,Atropine,Atropine,Atropine,0.5% and 1%,Eye Drops,30,V03,General Outpatient,UAE Pharma,RX,730
+354,Tropicamide,Tropicamide,Tropicamide,10 mg/ml,Eye Drops,30,V03,General Outpatient,UAE Pharma,RX,730
+355,Potassium Chloride,Potassium Chloride,Potassium Chloride,"1 mmol/ml 600mg, 20mEq/15mL (500mL)",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+356,Calcium,Calcium,Calcium,500 mg (elemental),Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+357,Cyanocobalamin,Cyanocobalamin,Cyanocobalamin,"1mg, 1mg,3mg",Tablet,30,N05,Anxiolytic,Novartis,RX,730
+358,Phytomenadione,Phytomenadione,Phytomenadione,"1 mg/mL ; 10 mg/mL, 10mg",Capsule,30,V03,General Outpatient,UAE Pharma,RX,730
+359,Pyridoxine,Pyridoxine,Pyridoxine,"10mg , 40mg, 100mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+360,Thiamine,Thiamine,Thiamine,"100mg, 100mg/ml (2ml)",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+361,Nicotine,Nicotine,Nicotine,"2mg, 4mg, 5mg,, 10mg, 15mg, 20mg, 25mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
+362,Varenicline Tartrate,Varenicline Tartrate,Varenicline Tartrate,"0.5mg, 1mg",Tablet,30,V03,General Outpatient,UAE Pharma,RX,730
